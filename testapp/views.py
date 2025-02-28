@@ -62,7 +62,7 @@ def whatsapp_webhook(request):
         # elif step == 1:
         #     all_data["samaj_name"] = message_body
         #     response.message("Great! What is your family surname?")
-        #     all_data["step"] = 2
+        #     all_data["step"] =  2
         #     print(all_data)
 
         # elif step == 2:
