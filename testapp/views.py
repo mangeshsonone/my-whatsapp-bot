@@ -4,10 +4,15 @@ from twilio.rest import Client
 from django.http import JsonResponse,HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from twilio.twiml.messaging_response import MessagingResponse
-import json
+import json 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Twilio Credentials
-
+account_sid = os.getenv('TWILIO_ACCOUNT_SID')
+auth_token = os.getenv('TWILIO_AUTH_TOKEN')
 client = Client(account_sid, auth_token)
 TWILIO_WHATSAPP_NUMBER = "whatsapp:+14155238886"
 
@@ -20,7 +25,8 @@ def message_to(request):
     message = client.messages.create(
         from_='whatsapp:+14155238886',
         to='whatsapp:+917775889251',
-        
+        # content_sid='HXb5b62575e6e4ff6129ad7c8efe1f983e',
+        # content_variables='{"1":"12/1","2":"3pm"}'
         body='Hello! How are you?'
     )
     return HttpResponse("message send to whatsapp")
@@ -60,7 +66,7 @@ def whatsapp_webhook(request):
         # elif step == 1:
         #     all_data["samaj_name"] = message_body
         #     response.message("Great! What is your family surname?")
-        #     all_data["step"] =  2
+        #     all_data["step"] = 2
         #     print(all_data)
 
         # elif step == 2:
@@ -109,7 +115,7 @@ def send_whatsapp_button(request):
          message = client.messages.create(
             from_='whatsapp:+14155238886',  # Twilio WhatsApp sender
             to='whatsapp:+917775889251',  # Your verified WhatsApp number
-              # Your approved content SID
+            content_sid='HX3330cec17427df896f662bec23e54218',  # Your approved content SID
             content_variables='{}'
         )
 
