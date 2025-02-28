@@ -20,8 +20,7 @@ def message_to(request):
     message = client.messages.create(
         from_='whatsapp:+14155238886',
         to='whatsapp:+917775889251',
-        # content_sid='HXb5b62575e6e4ff6129ad7c8efe1f983e',
-        # content_variables='{"1":"12/1","2":"3pm"}'
+        
         body='Hello! How are you?'
     )
     return HttpResponse("message send to whatsapp")
@@ -110,7 +109,7 @@ def send_whatsapp_button(request):
          message = client.messages.create(
             from_='whatsapp:+14155238886',  # Twilio WhatsApp sender
             to='whatsapp:+917775889251',  # Your verified WhatsApp number
-            content_sid='HX3330cec17427df896f662bec23e54218',  # Your approved content SID
+              # Your approved content SID
             content_variables='{}'
         )
 
