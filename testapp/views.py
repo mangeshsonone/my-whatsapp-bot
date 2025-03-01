@@ -12,9 +12,13 @@ from .models import Samaj,Family,Member
 load_dotenv()
 
 # Twilio Credentials
+<<<<<<< HEAD
 account_sid = os.getenv('TWILIO_ACCOUNT_SID')
 auth_token = os.getenv('TWILIO_AUTH_TOKEN')
 content_sid = os.getenv('CONTENT_SID')
+=======
+
+>>>>>>> ed7220e (Initial commi1t)
 client = Client(account_sid, auth_token)
 TWILIO_WHATSAPP_NUMBER = "whatsapp:+14155238886"
 
