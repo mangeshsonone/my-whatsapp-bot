@@ -53,7 +53,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'whatsapp_bot.urls'
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://ff18-36-255-182-94.ngrok-free.app",
+    "https://70f3-36-255-181-237.ngrok-free.app",
 ]
 
 

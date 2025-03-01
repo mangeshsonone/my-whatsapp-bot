@@ -25,3 +25,6 @@ class Member(models.Model):
     blood_group = models.CharField(max_length=5)
     mobile1 = models.CharField(max_length=15)
     mobile2 = models.CharField(max_length=15, blank=True, null=True)
+
+    def __str__(self):
+        return self.name
