@@ -14,29 +14,24 @@ load_dotenv()
 # Twilio Credentials
 account_sid = os.getenv('TWILIO_ACCOUNT_SID')
 auth_token = os.getenv('TWILIO_AUTH_TOKEN')
+content_sid = os.getenv('CONTENT_SID')
 client = Client(account_sid, auth_token)
 TWILIO_WHATSAPP_NUMBER = "whatsapp:+14155238886"
-
-
-# Replace with your approved template's content SID
-# content_sid = 'YOUR_APPROVED_TEMPLATE_SID'
 
 # Send WhatsApp Template Message with Quick Reply Buttons
 def message_to(request):
     message = client.messages.create(
-        from_='whatsapp:+14155238886',
+        from_=TWILIO_WHATSAPP_NUMBER,
         to='whatsapp:+917775889251',
-        # content_sid='HXb5b62575e6e4ff6129ad7c8efe1f983e',
-        # content_variables='{"1":"12/1","2":"3pm"}'
-        body='Hello! How are you?'
+        content_sid=content_sid,
+        content_variables='{"1":"12/1","2":"3pm"}'
     )
-    return HttpResponse("message send to whatsapp")
+    return HttpResponse("Message sent to WhatsApp")
 
 
-    print("Message sent successfully. SID:", message.sid)
 
 
-    print(message.sid)
+    
 def addin_database(all_data):
      print("all data inside func",all_data)
      s_name=all_data['samaj_name']
@@ -73,7 +68,7 @@ def whatsapp_webhook(request):
 
         print(f"Received WhatsApp message from {from_number}: {message_body}")
 
-        # Create Twilio response object
+        
         response = MessagingResponse()
         
         # if from_number not in all_data:
@@ -203,9 +198,9 @@ def send_whatsapp_button(request):
         # Send interactive message (buttons)
         
          message = client.messages.create(
-            from_='whatsapp:+14155238886',  # Twilio WhatsApp sender
-            to='whatsapp:+917775889251',  # Your verified WhatsApp number
-            content_sid='HX3330cec17427df896f662bec23e54218',  # Your approved content SID
+            from_='whatsapp:+14155238886',  
+            to='whatsapp:+917775889251', 
+             
             content_variables='{}'
         )
 
