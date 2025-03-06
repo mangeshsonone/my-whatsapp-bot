@@ -14,8 +14,12 @@ load_dotenv()
 
 # Twilio Credentials
 
+
 account_sid = os.getenv('TWILIO_ACCOUNT_SID')
 auth_token = os.getenv('TWILIO_AUTH_TOKEN')
+content_sid = os.getenv('CONTENT_SID')
+
+
 content_sid = os.getenv('CONTENT_SID')
 
 
@@ -25,6 +29,7 @@ TWILIO_WHATSAPP_NUMBER = "whatsapp:+14155238886"
 # Send WhatsApp Template Message with Quick Reply Buttons
 def message_to(request):
     message = client.messages.create(
+        from_=TWILIO_WHATSAPP_NUMBER,
         from_=TWILIO_WHATSAPP_NUMBER,
         to='whatsapp:+917775889251',
         content_sid=content_sid,
@@ -247,6 +252,8 @@ def whatsapp_webhook(request):
         from_number = request.POST.get('From')  # Sender's WhatsApp number
         message_body = request.POST.get('Body')  # User message
 
+        message_body = request.POST.get('Body')  # User message
+
         print(f"Received WhatsApp message from {from_number}: {message_body}")
 
         
@@ -378,6 +385,7 @@ def whatsapp_webhook(request):
         return HttpResponse(str(response), content_type="text/xml")
 
     return HttpResponse("Invalid request method", status=400)
+    return HttpResponse("Invalid request method", status=400)
 
 
 
@@ -393,6 +401,9 @@ def send_whatsapp_button(request):
         # Send interactive message (buttons)
         
          message = client.messages.create(
+            from_='whatsapp:+14155238886',  
+            to='whatsapp:+917775889251', 
+             
             from_='whatsapp:+14155238886',  
             to='whatsapp:+917775889251', 
              
@@ -433,4 +444,5 @@ def gotobutton(request):
 
 
 
+ 
  

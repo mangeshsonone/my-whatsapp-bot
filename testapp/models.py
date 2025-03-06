@@ -67,6 +67,11 @@ class FamilyHead(PersonsData):
 class Member(PersonsData):
     family_head = models.ForeignKey(FamilyHead, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+    age = models.IntegerField()
+    blood_group = models.CharField(max_length=5)
+    mobile1 = models.CharField(max_length=15)
+    mobile2 = models.CharField(max_length=15, blank=True, null=True)
 
     def __str__(self):
         return self.name

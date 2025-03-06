@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'testapp',
-    
 ]
 
 MIDDLEWARE = [
@@ -54,7 +53,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'whatsapp_bot.urls'
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://9cf8-2401-4900-7c77-9628-b57b-276f-7687-a36d.ngrok-free.app",
+    "https://70f3-36-255-181-237.ngrok-free.app",
 ]
 
 
