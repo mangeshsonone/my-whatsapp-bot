@@ -7,7 +7,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 import json 
 import os
 from dotenv import load_dotenv
-from .models import Samaj,Family,Member
+from .models import Samaj,Family,Member,FamilyHead
 
 load_dotenv()
 
@@ -35,30 +35,191 @@ def message_to(request):
 
 
     
+from django.apps import apps
+
 def addin_database(all_data):
-     print("all data inside func",all_data)
-     s_name=all_data['samaj_name']
-     samaj= Samaj.objects.get(samaj_name=s_name)
-     family,xyx= Family.objects.get_or_create(samaj=samaj, surname=all_data['surname'])
+    print("all data inside func", all_data)
+    s_name = all_data['samaj_name']
+    samaj = Samaj.objects.get(samaj_name=s_name)
+    family, created = Family.objects.get_or_create(samaj=samaj, surname=all_data['surname'])
+    
+    head_data = all_data.get('head of family', {})
+    head_data['family'] = family
+    head_data['name_of_head'] = head_data.pop('name', None)
+    
+    # Get the field names of the FamilyHead model
+    FamilyHeadModel = apps.get_model('your_app_name', 'FamilyHead')
+    valid_fields = {field.name for field in FamilyHeadModel._meta.get_fields()}
+    
+    # Filter head_data to only include valid fields
+    filtered_head_data = {k: v for k, v in head_data.items() if k in valid_fields}
+    
+    family_head = FamilyHead.objects.create(**filtered_head_data)
 
-     member_data = all_data['members']
-     member = Member.objects.create(
-        family=family,
-        name=member_data['name'],
-        gender=member_data['gender'],
-        age=member_data['age'],
-        blood_group=member_data['bloodgroup'],
-        mobile1=member_data['mobile'],
-        
-    )
+    members_list = all_data.get('members_list', {}).get('the_members', {})
 
-     print(f" Successfully saved to DB: {member}")
+    for member_key, member_data in members_list.items():
+        member_data['family_head'] = family_head  # Associate with the family head
+        Member.objects.create(**member_data)
 
+    print("Successfully saved to DB.")
 
         
      
 all_data={}
 
+def memberdetail(md,msg,h):
+     step=md['step']
+     if step==0:
+        reply=f"enter name of {h}"
+        print(all_data)
+        md['step']=1
+        print("\n\n\n")
+        print(all_data)
+        print(reply)
+        print("\n\n\n")
+        return reply
+    
+     
+     if step==1:
+        md['name']=msg
+        reply=f"enter age of {h}"
+        md['step']=2
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==2:
+        md['age']=msg
+        reply=f"enter gender of {h}"
+        md['step']=3
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==3:
+        md['marital_status']=msg
+        reply=f"enter qualification of {h}"
+        md['step']=4
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+
+     elif step==4:
+        md['qualification']=msg
+        reply=f"enter occupation of {h}"
+        md['step']=5
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==5:
+        md['occupation']=msg
+        reply=f"exact_nature_of_duties of {h}"
+        md['step']=6
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==6:
+        md['enter exact_nature_of_duties']=msg
+        reply=f"enter state of {h}"
+        md['step']=7
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==7:
+        md['state']=msg
+        reply=f"enter district of {h}"
+        md['step']=8
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==8:
+        md['district']=msg
+        reply=f"enter permanent_address of {h}"
+        md['step']=9
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==9:
+        md['permanent_address']=msg
+        reply=f"enter landline_no of {h}"
+        md['step']=10
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==10:
+        md['landline_no']=msg
+        reply=f"enter phone_no of {h}"
+        md['step']=11
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==11:
+        md['phone_no']=msg
+        reply="enter alternative_no of {h}"
+        md['step']=12
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==12:
+        md['alternative_no']=msg
+        reply="enter email_id of {h}"
+        md['step']=13
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==13:
+        md['email_id']=msg
+        md['step']=14
+        reply="enter submit"
+        
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==14:
+        md['email_id']=msg
+        md['step']=15
+        reply="Need to Enter details of the members of the Family, enter ok to continue"
+        
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+  
+    #  elif step==14:
+    #     md['email_id']=msg
+    #     reply="enter job_profile"
+    #     md['step']=15
+    #     print(all_data)
+    #     print(reply)
+    #     return reply
+     
+    
+
+     
 
 @csrf_exempt
 def whatsapp_webhook(request):
@@ -84,7 +245,7 @@ def whatsapp_webhook(request):
             all_data[from_number] = {}
             all_data["step"]=0
         step = all_data["step"]
-
+        print(step)
         # Step-based conversation
         if step == 0:
             reply = "Welcome! What is the name of your Samaj? (Type your samaj from given: Brahmin, Kshatriya, Vaishya, Shudra)"
@@ -106,78 +267,102 @@ def whatsapp_webhook(request):
             print("\n\n\n")
             print(reply)
             print("\n\n\n")
-
+                
         elif step == 2:
             all_data["surname"] = message_body
-            reply = f"Thank you! You entered:\nSamaj: {all_data['samaj_name']}\nSurname: {message_body}\n Enter your name"
+            reply = f"Thank you! You entered:\nSamaj: {all_data['samaj_name']}\nSurname: {message_body}\n Need to Enter details of the Head of the Family, enter ok to continue"
             all_data["step"] = 3  # End or continue with next step
 
             print("\n\n\n")
             print(reply)
             print("\n\n\n")
+            
 
-        
 
         elif step==3:
+             if "head of family" not in all_data:
+                all_data["head of family"] = {}
+             msg=message_body
+             if 'step' not in all_data["head of family"]:
+                 all_data["head of family"]["step"]=0
+
+             reply=memberdetail(all_data["head of family"],msg,"head of family")
+             print("step in webhook ",all_data["head of family"]["step"])
+             if all_data["head of family"]["step"]==15:
+                 print("step in webhook and in if ",all_data["head of family"]["step"])
+                 all_data["step"] = 4
+                 print(all_data)
+            
+             
+             
+             
+
+        elif step==4:
+            reply="how many members are there in your family"
+            all_data["step"] = 5
+
+            print("\n\n\n")
+            print(reply)
+            print("\n\n\n")
+
+             
+
+        elif step==5:
+             msg=message_body
+             if "members_list" not in all_data:
+                all_data["members_list"] = {}
+                if 'tota_members' not in all_data["members_list"]:
+                    all_data["members_list"]['total_members']=int(message_body)
+                    all_data["members_list"]['current_member']=1
+
+
+             if all_data["members_list"]['current_member']==all_data["members_list"]['total_members']+1:
+                 
+                 all_data["step"] = 6
+
+             c=all_data["members_list"]['current_member']
+             if 'the_members' not in all_data["members_list"]:
+                all_data["members_list"]["the_members"]={}
+             
+             
+             
+             if f"member{c}" not in all_data["members_list"]['the_members']:
+                    all_data["members_list"]['the_members'][f"member{c}"]={}
+
+             if "step" not in all_data["members_list"]['the_members'][f"member{c}"]:
+                    all_data["members_list"]['the_members'][f"member{c}"]["step"]=0
+                 
+                 
+             reply=memberdetail(all_data["members_list"]['the_members'][f"member{c}"],msg,f"member{c}")
+             
+             if all_data["members_list"]['the_members'][f"member{c}"]["step"]==4:
+                    all_data["members_list"]['current_member']=all_data["members_list"]['current_member']+1
+                    print("\n\n\n")
+                    print("current val",c)
+                    print("\n\n\n")
+
+             
+
+             
+
+             
+
+             print(all_data)
+
+
+
+        elif step==6:
                 all_data['members']={}
                 
                 all_data['members']['name']=message_body
-                reply="enter your age"
-                all_data["step"] = 4
-                print(all_data)
-
-                print("\n\n\n")
-                print(reply)
-                print("\n\n\n")
-
-        elif step==4:
-                
-                all_data['members']['age']=message_body
-                reply=f"entr your gender "
-                all_data["step"] = 5
-                print(all_data)
-
-                print("\n\n\n")
-                print(reply)
-                print("\n\n\n")
-
-        elif step==5:
-                
-                all_data['members']['gender']=message_body
-                all_data["step"] = 6
-                reply=f"entr your bloodgroup "
-                print(all_data)
-
-                print("\n\n\n")
-                print(reply)
-                print("\n\n\n")
-
-        elif step==6:
-                
-                all_data['members']['bloodgroup']=message_body
-                reply=f"entr your mobile no"
-                all_data["step"] = 7
-                print(all_data)
-
-                print("\n\n\n")
-                print(reply)
-                print("\n\n\n")
-
-        elif step==7:
-                
-                all_data['members']['mobile']=message_body
-
-                print("\n\n\n")
-                print(all_data)
-                print("\n\n\n")
-
                 addin_database(all_data)
-                all_data["step"] = 8
-                reply = "Your data has been successfully saved!"
-        
+                reply="data is recorded"
+                # all_data["step"] = 7
+                print(all_data)
 
-        else:
-            reply = "We have recorded your details. Thank you!"
+                print("\n\n\n")
+                print(reply)
+                print("\n\n\n")
 
        
         
