@@ -7,97 +7,377 @@ from twilio.twiml.messaging_response import MessagingResponse
 import json 
 import os
 from dotenv import load_dotenv
+from .models import Samaj,Family,Member,FamilyHead
+from django.core.exceptions import ObjectDoesNotExist
 
 load_dotenv()
 
 # Twilio Credentials
+
 account_sid = os.getenv('TWILIO_ACCOUNT_SID')
 auth_token = os.getenv('TWILIO_AUTH_TOKEN')
+content_sid = os.getenv('CONTENT_SID')
+
+
 client = Client(account_sid, auth_token)
 TWILIO_WHATSAPP_NUMBER = "whatsapp:+14155238886"
-
-
-# Replace with your approved template's content SID
-# content_sid = 'YOUR_APPROVED_TEMPLATE_SID'
 
 # Send WhatsApp Template Message with Quick Reply Buttons
 def message_to(request):
     message = client.messages.create(
-        from_='whatsapp:+14155238886',
+        from_=TWILIO_WHATSAPP_NUMBER,
         to='whatsapp:+917775889251',
-        # content_sid='HXb5b62575e6e4ff6129ad7c8efe1f983e',
-        # content_variables='{"1":"12/1","2":"3pm"}'
-        body='Hello! How are you?'
+        content_sid=content_sid,
+        content_variables='{"1":"12/1","2":"3pm"}'
     )
-    return HttpResponse("message send to whatsapp")
+    return HttpResponse("Message sent to WhatsApp")
 
 
-    print("Message sent successfully. SID:", message.sid)
 
 
-    print(message.sid)
+    
 
-all_data = {}
 
-@csrf_exempt  # Allow external requests (needed for Twilio)
+
+def addin_database(all_data):
+    print("Received Data:", all_data)
+
+    # Get or create Samaj
+    s_name = all_data.get('samaj_name')
+    samaj, _ = Samaj.objects.get_or_create(samaj_name=s_name)
+
+    # Get or create Family
+    surname = all_data.get('surname')
+    family, _ = Family.objects.get_or_create(samaj=samaj, surname=surname)
+
+    # Process Family Head
+    head_data = all_data.get('head of family')
+    if head_data:
+        head_data['family'] = family  
+        head_data['name_of_head'] = head_data.pop('name') 
+        head_data['age'] = int(head_data['age']) 
+        
+
+        valid_head_fields = {field.name for field in FamilyHead._meta.get_fields()}
+        
+        head_data = {k: v for k, v in head_data.items() if k in valid_head_fields}
+
+        
+        family_head = FamilyHead.objects.create(**head_data)
+    else:
+        print("No family head data provided!")
+        return
+
+    
+    members_list = all_data.get('members_list').get('the_members')
+   
+    for member_key, member_data in members_list.items():
+        member_data['family_head'] = family_head  
+        member_data['age'] = int(member_data['age'])
+    
+
+        valid_member_fields = {field.name for field in Member._meta.get_fields()}
+        member_data = {k: v for k, v in member_data.items() if k in valid_member_fields}
+
+        Member.objects.create(**member_data)
+    
+        
+     
+all_data={}
+
+def memberdetail(md,msg,h):
+     step=md['step']
+     if step==0:
+        reply=f"enter name of {h}"
+        print(all_data)
+        md['step']=1
+        print("\n\n\n")
+        print(all_data)
+        print(reply)
+        print("\n\n\n")
+        return reply
+    
+     
+     if step==1:
+        md['name']=msg
+        reply=f"enter age of {h}"
+        md['step']=2
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==2:
+        md['age']=msg
+        reply=f"enter gender of {h}"
+        md['step']=3
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==3:
+        md['marital_status']=msg
+        reply=f"enter qualification of {h}"
+        md['step']=4
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+
+     elif step==4:
+        md['qualification']=msg
+        reply=f"enter occupation of {h}"
+        md['step']=5
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==5:
+        md['occupation']=msg
+        reply=f"exact_nature_of_duties of {h}"
+        md['step']=6
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==6:
+        md['enter exact_nature_of_duties']=msg
+        reply=f"enter state of {h}"
+        md['step']=7
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==7:
+        md['state']=msg
+        reply=f"enter district of {h}"
+        md['step']=8
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==8:
+        md['district']=msg
+        reply=f"enter permanent_address of {h}"
+        md['step']=9
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==9:
+        md['permanent_address']=msg
+        reply=f"enter landline_no of {h}"
+        md['step']=10
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==10:
+        md['landline_no']=msg
+        reply=f"enter phone_no of {h}"
+        md['step']=11
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==11:
+        md['phone_no']=msg
+        reply="enter alternative_no of {h}"
+        md['step']=12
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==12:
+        md['alternative_no']=msg
+        reply="enter email_id of {h}"
+        md['step']=13
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==13:
+        md['email_id']=msg
+        md['step']=14
+        reply="enter submit"
+        
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+     
+     elif step==14:
+        md['email_id']=msg
+        md['step']=15
+        reply=" enter ok to continue"
+        
+        print(all_data)
+        print("\n\n\n")
+        print(reply)
+        return reply
+  
+     elif step==15:
+        
+        reply="Need to add members data enter ok to continue"
+        md['step']=15
+        print(all_data)
+        print(reply)
+        return reply
+     
+    
+
+     
+
+@csrf_exempt
 def whatsapp_webhook(request):
     if request.method == 'GET':
         return HttpResponse("Webhook is active. Use POST to send messages.", status=200)
 
     if request.method == 'POST':
-        # Extract message details from Twilio's request
         from_number = request.POST.get('From')  # Sender's WhatsApp number
-        message_body = request.POST.get('Body')  # The message text
-        
+        message_body = request.POST.get('Body')  # User message
+
         print(f"Received WhatsApp message from {from_number}: {message_body}")
 
         
         response = MessagingResponse()
-        print(response.message)
-        response.message("Thanks for your message! We will get back to you soonn.")
-        print("aftr resp")
         
-        # response = MessagingResponse()
+        
 
-        # if step == 0:
-        #     response.message("Welcome! What is the name of your Samaj? (plz type any one of: Bramhin, Kshatriya, Vaishya, Shudra )")
-        #     all_data["step"] = 1
+        
+        if from_number not in all_data:
+            all_data[from_number] = {}
+            all_data["step"]=6
+        step = all_data["step"]
+        print(step)
+        Step-based conversation
+        if step == 0:
+            reply = "Welcome! What is the name of your Samaj? (Type your samaj from given: Brahmin, Kshatriya, Vaishya, Shudra)"
+            all_data["step"] = 1
+            print("\n\n\n")
+            print(reply)
+            print("\n\n\n")
 
-        # elif step == 1:
-        #     all_data["samaj_name"] = message_body
-        #     response.message("Great! What is your family surname?")
-        #     all_data["step"] = 2
-        #     print(all_data)
+        elif step == 1:
+            valid_samaj_names = ["Brahmin", "Kshatriya", "Vaishya", "Shudra"]
+            
+            if message_body.capitalize() in valid_samaj_names:
+                all_data["samaj_name"] = message_body.capitalize()
+                reply = f"Thank you! You entered:\nSamaj: {message_body} \nWhat is your family surname?"
+                all_data["step"] = 2
+                print(all_data["samaj_name"])
+            else:
+                reply = "Invalid Samaj name. Please enter one of the following: Brahmin, Kshatriya, Vaishya, Shudra."
+            print("\n\n\n")
+            print(reply)
+            print("\n\n\n")
+                
+        elif step == 2:
+            all_data["surname"] = message_body
+            reply = f"Thank you! You entered:\nSamaj: {all_data['samaj_name']}\nSurname: {message_body}\n Need to Enter details of the Head of the Family, enter ok to continue"
+            all_data["step"] = 3  # End or continue with next step
 
-        # elif step == 2:
-        #     all_data["family_name"] = message_body
-        #     response.message("Got it! What is your full name?")
-        #     all_data["step"] = 3
-        #     print(all_data)
+            print("\n\n\n")
+            print(reply)
+            print("\n\n\n")
+            
 
-        # elif step == 3:
-        #     all_data["total_members"] = message_body
-        #     response.message("How many members you have in your family?")
-        #     all_data["step"] = 4
-        #     print(all_data)
 
-        # elif step == 4:
-        #     all_data['members_data']={}
-        #     members_data=all_data['members_data']
-        #     members_data['step']=0
-        #     mstep=members_data['step']
-        #     for i in range(message_body):
-        #          response.message(f"enter name of {i}st member")
+        elif step==3:
+             if "head of family" not in all_data:
+                all_data["head of family"] = {}
+             msg=message_body
+             if 'step' not in all_data["head of family"]:
+                 all_data["head of family"]["step"]=0
+
+             reply=memberdetail(all_data["head of family"],msg,"head of family")
+             print("step in webhook ",all_data["head of family"]["step"])
+             if all_data["head of family"]["step"]==15:
+                 print("step in webhook and in if ",all_data["head of family"]["step"])
+                 all_data["step"] = 4
+                 print(all_data)
+            
+             
+             
              
 
+        elif step==4:
+            reply="how many members are there in your family"
+            all_data["step"] = 5
+
+            print("\n\n\n")
+            print(reply)
+            print("\n\n\n")
+
+             
+
+        elif step==5:
+             msg=message_body
+             if "members_list" not in all_data:
+                all_data["members_list"] = {}
+                if 'tota_members' not in all_data["members_list"]:
+                    all_data["members_list"]['total_members']=int(message_body)
+                    all_data["members_list"]['current_member']=1
+
+             
+
+             c=all_data["members_list"]['current_member']
+             if 'the_members' not in all_data["members_list"]:
+                all_data["members_list"]["the_members"]={}
+             
+             
+             
+             if f"member{c}" not in all_data["members_list"]['the_members']:
+                    all_data["members_list"]['the_members'][f"member{c}"]={}
+
+             if "step" not in all_data["members_list"]['the_members'][f"member{c}"]:
+                    all_data["members_list"]['the_members'][f"member{c}"]["step"]=0
+                 
+                 
+             reply=memberdetail(all_data["members_list"]['the_members'][f"member{c}"],msg,f"member{c}")
+             
+             if all_data["members_list"]['the_members'][f"member{c}"]["step"]==14:
+                    all_data["members_list"]['current_member']=all_data["members_list"]['current_member']+1
+                    print("\n\n\n")
+                    
+             print("the current member is",all_data["members_list"]['current_member'])
+             if all_data["members_list"]['current_member']==all_data["members_list"]['total_members']+1:
+                 print('currentcurrent')
+                 all_data["step"] = 6
+
+             print(all_data)
 
 
 
-        response.message("Thanks for your message! We will get back to you soon.")
+        elif step==6:
 
-        return HttpResponse(str(response), content_type="application/xml")
+                
+                
+                addin_database(all_data)
+                reply="data is recorded successfully"
+                # all_data["step"] = 7
 
-    return JsonResponse({"error": "Invalid request method"}, status=400)
+                print("\n\n\n")
+                print(reply)
+                print("\n\n\n")
+
+       
+        
+        response.message(reply)
+        
+        return HttpResponse(str(response), content_type="text/xml")
+
+    return HttpResponse("Invalid request method", status=400)
 
 
 
@@ -113,9 +393,9 @@ def send_whatsapp_button(request):
         # Send interactive message (buttons)
         
          message = client.messages.create(
-            from_='whatsapp:+14155238886',  # Twilio WhatsApp sender
-            to='whatsapp:+917775889251',  # Your verified WhatsApp number
-            content_sid='HX3330cec17427df896f662bec23e54218',  # Your approved content SID
+            from_='whatsapp:+14155238886',  
+            to='whatsapp:+917775889251', 
+             
             content_variables='{}'
         )
 
@@ -153,120 +433,4 @@ def gotobutton(request):
 
 
 
-
-
-
-
-
-# from django.http import JsonResponse, HttpResponse
-# from django.views.decorators.csrf import csrf_exempt
-# from twilio.twiml.messaging_response import MessagingResponse
-# from .models import Samaj, Family, Member
-
-# # Temporary storage for user sessions (Replace with DB session for production)
-# user_sessions = {}
-
-# @csrf_exempt
-# def whatsapp_webhook(request):
-#     """Handles incoming messages from WhatsApp and collects data step-by-step."""
-    
-#     if request.method == 'POST':
-#         from_number = request.POST.get('From')  # Sender's WhatsApp number
-#         message_body = request.POST.get('Body').strip()  # User's message
-        
-#         print(f"Received message from {from_number}: {message_body}")
-
-#         # Initialize user session if not exists
-#         if from_number not in user_sessions:
-#             user_sessions[from_number] = {"step": 0, "data": {}}
-
-#         user_data = user_sessions[from_number]
-#         step = user_data["step"]
-#         response = MessagingResponse()
-
-#         if step == 0:
-#             response.message("Welcome! What is the name of your Samaj?")
-#             user_data["step"] = 1
-
-#         elif step == 1:
-#             user_data["data"]["samaj_name"] = message_body
-#             response.message("Great! What is your family surname?")
-#             user_data["step"] = 2
-
-#         elif step == 2:
-#             user_data["data"]["family_name"] = message_body
-#             response.message("Got it! What is your full name?")
-#             user_data["step"] = 3
-
-#         elif step == 3:
-#             user_data["data"]["member_name"] = message_body
-#             response.message("Nice to meet you! What is your age?")
-#             user_data["step"] = 4
-
-#         elif step == 4:
-#             if message_body.isdigit():
-#                 user_data["data"]["age"] = int(message_body)
-#                 response.message("Thank you! What is your gender? (M/F/O)")
-#                 user_data["step"] = 5
-#             else:
-#                 response.message("Please enter a valid number for age.")
-
-#         elif step == 5:
-#             if message_body.upper() in ["M", "F", "O"]:
-#                 user_data["data"]["gender"] = message_body.upper()
-#                 response.message("Great! What is your blood group?")
-#                 user_data["step"] = 6
-#             else:
-#                 response.message("Please enter M for Male, F for Female, or O for Other.")
-
-#         elif step == 6:
-#             user_data["data"]["blood_group"] = message_body
-#             response.message("Noted! What is your primary mobile number?")
-#             user_data["step"] = 7
-
-#         elif step == 7:
-#             user_data["data"]["mobile1"] = message_body
-#             response.message("Do you have a secondary mobile number? (Reply with number or type 'No')")
-#             user_data["step"] = 8
-
-#         elif step == 8:
-#             if message_body.lower() == "no":
-#                 user_data["data"]["mobile2"] = None
-#             else:
-#                 user_data["data"]["mobile2"] = message_body
-
-#             # **Save collected data to the database**
-#             samaj_name = user_data["data"]["samaj_name"]
-#             family_name = user_data["data"]["family_name"]
-#             member_name = user_data["data"]["member_name"]
-#             age = user_data["data"]["age"]
-#             gender = user_data["data"]["gender"]
-#             blood_group = user_data["data"]["blood_group"]
-#             mobile1 = user_data["data"]["mobile1"]
-#             mobile2 = user_data["data"]["mobile2"]
-
-#             # Check if Samaj exists, else create it
-#             samaj, _ = Samaj.objects.get_or_create(samaj_name=samaj_name)
-
-#             # Check if Family exists under the Samaj, else create it
-#             family, _ = Family.objects.get_or_create(samaj=samaj, surname=family_name)
-
-#             # Create the Member entry
-#             Member.objects.create(
-#                 family=family,
-#                 name=member_name,
-#                 gender=gender,
-#                 age=age,
-#                 blood_group=blood_group,
-#                 mobile1=mobile1,
-#                 mobile2=mobile2
-#             )
-
-#             response.message("Thank you! Your details have been successfully saved. ✅")
-
-#             # Clear user session
-#             del user_sessions[from_number]
-
-#         return HttpResponse(str(response), content_type="application/xml")
-
-#     return JsonResponse({"error": "Invalid request method"}, status=400)
+ 
