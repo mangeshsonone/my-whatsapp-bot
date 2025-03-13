@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Samaj,Family,Member
+from .models import Samaj,Family,Member,FamilyHead
 
 admin.site.register(Samaj)
 admin.site.register(Family)

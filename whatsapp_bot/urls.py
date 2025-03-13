@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("whatsapp_webhook/",views.whatsapp_webhook),
     path("message_to/",views.message_to),
-    path("send_whatsapp_button/",views.send_whatsapp_button),
+    # path("send_whatsapp_button/",views.send_whatsapp_button),
     path("gotobutton/",views.gotobutton),
 ]

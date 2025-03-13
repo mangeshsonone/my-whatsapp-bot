@@ -1,0 +1,11 @@
+INFO 2025-03-13 10:40:52,352 autoreload Watching for file changes with StatReloader
+INFO 2025-03-13 10:41:20,185 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-13 10:41:20,718 autoreload Watching for file changes with StatReloader
+INFO 2025-03-13 10:42:29,516 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-13 10:42:30,431 autoreload Watching for file changes with StatReloader
+INFO 2025-03-13 10:42:38,879 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-13 10:42:39,488 autoreload Watching for file changes with StatReloader
+INFO 2025-03-13 10:45:55,591 views Received WhatsApp message from whatsapp:+917775889251: start
+DEBUG 2025-03-13 10:45:55,591 views Current step: 0
+INFO 2025-03-13 10:45:55,591 views Reply to user: Welcome! What is the name of your Samaj? (Please enter one of the following: Brahmin, Kshatriya, Vaishya, Shudra)
+INFO 2025-03-13 10:45:55,592 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 191

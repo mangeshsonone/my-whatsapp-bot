@@ -25,12 +25,12 @@ class PersonsData(models.Model):
     ]
 
     age = models.IntegerField(choices=AGE_CHOICES)
+    birth_date = models.CharField(max_length=100)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     marital_status = models.CharField(max_length=1, choices=MARITAL_STATUS_CHOICES)
     qualification = models.CharField(max_length=100)
-    job_profile = models.CharField(max_length=100)
     occupation = models.CharField(max_length=100) 
-    exact_nature_of_duties = models.TextField()
+    exact_nature_of_duties = models.CharField(max_length=1000)
     state = models.CharField(max_length=100)
     district = models.CharField(max_length=100)
     permanent_address = models.TextField()
@@ -40,12 +40,14 @@ class PersonsData(models.Model):
     email_id = models.EmailField()
     blood_group = models.CharField(max_length=3, choices=BLOOD_GROUP_CHOICES)
     photo_upload = models.ImageField(upload_to='photos/')
+    info_from_number=models.CharField(max_length=15)
 
     class Meta:
         abstract = True  
 
 class Samaj(models.Model):
     samaj_name = models.CharField(max_length=100, unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.samaj_name
@@ -53,6 +55,7 @@ class Samaj(models.Model):
 class Family(models.Model):
     samaj = models.ForeignKey(Samaj, on_delete=models.CASCADE)
     surname = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.surname
@@ -60,18 +63,16 @@ class Family(models.Model):
 class FamilyHead(PersonsData):
     name_of_head = models.CharField(max_length=255)
     family = models.ForeignKey(Family, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.name_of_head
 
 class Member(PersonsData):
     family_head = models.ForeignKey(FamilyHead, on_delete=models.CASCADE)
+    relation_with_family_head = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
-    age = models.IntegerField()
-    blood_group = models.CharField(max_length=5)
-    mobile1 = models.CharField(max_length=15)
-    mobile2 = models.CharField(max_length=15, blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.name
