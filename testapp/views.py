@@ -33,11 +33,16 @@ logger = logging.getLogger('whatsapp_webhook')
 # Send WhatsApp Template Message with Quick Reply Buttons
 def message_to(request):
     message = client.messages.create(
+        # from_='+15856481063',
+        # body='hello from twilio',
+        # to='+917775889251'
         from_=TWILIO_WHATSAPP_NUMBER,
-        to='whatsapp:+917775889251',
+        to='whatsapp:+918308522448',
         content_sid=content_sid,
         content_variables='{"1":"12/1","2":"3pm"}'
+        
     )
+    
     return HttpResponse("Message sent to WhatsApp")
 
 
@@ -48,7 +53,7 @@ def addin_database(all_data):
 
     
     s_name = all_data.get('samaj_name')
-    samaj, _ = Samaj.objects.get_or_create(samaj_name=s_name)
+    samaj, created = Samaj.objects.get_or_create(samaj_name=s_name)
     logger.info("Samaj '%s' %s.", s_name, 'created' if created else 'retrieved')
 
     
@@ -101,7 +106,7 @@ all_data={}
 def memberdetail(md,msg,h):
      step=md['step']
      if step==0:
-        reply=f"Enter name of {h}"
+        reply=f"Enter name of the {h}"
         md['step']=1
         # print(all_data)
         # print("\n\n\n")  
@@ -118,14 +123,15 @@ def memberdetail(md,msg,h):
     
      
      if step==1:
+        
         md['name']=msg
         if md==all_data["head of family"]:
             md['step']=2
-            reply=f"You entered Name: {msg}\nEnter the age of {h}/(Enter 'R' to Re-enter previous input)"
+            reply=f"You entered Name: {msg}\nEnter the age of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
             
         else:
             md['step']=-1
-            reply=f"You entered Name: {msg}\Enter the relation of the {h} with the family head."
+            reply=f"You entered Name: {msg}\Enter the relation of the {h} with the Head of the family."
             
         # print(all_data)
         # print("\n\n\n")
@@ -137,7 +143,7 @@ def memberdetail(md,msg,h):
 
      if step==-1:
         md['relation_with_family_head']=msg
-        reply=f"You entered Relation: {msg}\nEnter the age of {h}"
+        reply=f"You entered Relation: {msg}\nEnter the age of the {h}"
         md['step']=2
         # print("\n\n\n")
         # print(all_data)
@@ -151,76 +157,89 @@ def memberdetail(md,msg,h):
 
      
      elif step==2:
-        if msg=="R":
+        if msg=="R" or msg=="r":
             md['step']=1
-            reply = f"Going back!\nEnter the name of {h}"
+            reply = f"Going back!\nEnter the name of the {h}"
             # print(reply)
             logger.info(f"User entered 'R'. Going back to step 1 for {h}.")
             
         else:
-            md['age']=msg
-            reply=f"You entered age: {msg},\nEnter the gender of {h}\nEnter 'M' for 'Male', 'F' for 'Female', 'O' for 'Other'./(Enter 'R' to Re-enter for previous input)"
-            md['step']=3
-            # print("\n\n\n")
-            # print(all_data)
-            # print("\n\n\n")
-            # print(reply)
-            logger.info(f"User entered age for {h}: {msg}")
-            logger.debug(f"State of all_data after entering age: {all_data}")
+            if msg.isdigit() and int(msg) > 0:
+                md['age']=msg
+                reply=f"You entered age: {msg},\nEnter the gender of the {h}\nEnter 'M' for 'Male', 'F' for 'Female', 'O' for 'Other'.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
+                md['step']=3
+                # print("\n\n\n")
+                # print(all_data)
+                # print("\n\n\n")
+                # print(reply)
+                logger.info(f"User entered age for {h}: {msg}")
+                logger.debug(f"State of all_data after entering age: {all_data}")
+            else:
+                reply=f" Invalid input. Please enter a valid number."
+                logger.warning(f"User entered invalid input: {msg}. Expected a positive number.")
         
         # Log the reply message
         logger.info(f"Reply message : {reply}")
         return reply
      
      elif step==3:
-        if msg=="R":
+        if msg=="R" or msg=="r":
             md['step']=2
-            reply = f"Going back!\nEnter the age of {h}"
+            reply = f"Going back!\nEnter the age of the {h}"
             # print(reply)
             logger.info(f"User entered 'R'. Going back to step 2 for {h}.")
         else:
-            md['gender']=msg
-            reply=f"You entered Gender: {md['gender']}\nEnter marital_status of {h}\nEnter 'S' for 'Single','M' for 'Married','D' for 'Divorced','W' for 'Widowed'./(Enter 'R' to Re-enter for previous input)"
-            md['step']=4
-            # print(all_data)
-            # print("\n\n\n")
-            # print(reply)
-            logger.info(f"User entered gender for {h}: {md['gender']}")
-            logger.debug(f"State of all_data after entering gender: {all_data}")
+            l=['M','F','O']
+            if msg in l:
+                md['gender']=msg
+                reply=f"You entered Gender: {md['gender']}\nEnter marital_status of the {h}\nEnter 'S' for 'Single','M' for 'Married','D' for 'Divorced','W' for 'Widowed'.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
+                md['step']=4
+                # print(all_data)
+                # print("\n\n\n")
+                # print(reply)
+                logger.info(f"User entered gender for {h}: {md['gender']}")
+                logger.debug(f"State of all_data after entering gender: {all_data}")
+            else:
+                reply=f" Invalid input. Please enter 'M' for 'Male', 'F' for 'Female', 'O' for 'Other'."
+                logger.warning(f"User entered invalid input: {msg}. Expected from the options.")
         
         # Log the reply message
         logger.info(f"Reply message : {reply}")
         return reply
 
      elif step==4:
-        if msg=="R":
+        if msg=="R" or msg=="r":
             md['step']=3
-            reply = f"Going back!\nEnter the gender of {h},enter 'M' for 'Male', 'F' for 'Female', 'O' for 'Other'."
+            reply = f"Going back!\nEnter the gender of the {h},(enter 'M' for 'Male', 'F' for 'Female', 'O' for 'Other')."
             # print(reply)
             logger.info(f"User entered 'R'. Going back to step 3 for {h}.")
         else:
-            md['marital_status']=msg
-            reply=f"You entered Marital Status: {md['marital_status']}\nEnter the Qualification of {h}./(Enter 'R' to Re-enter for previous input)"
-            md['step']=5
-            # print(all_data)
-            # print("\n\n\n")
-            # print(reply)
-            logger.info(f"User entered marital status for {h}: {md['marital_status']}")
-            logger.debug(f"State of all_data after entering marital status: {all_data}")
-        
+            l=['S','M','D','W']
+            if msg in l:
+                md['marital_status']=msg
+                reply=f"You entered Marital Status: {md['marital_status']}\nEnter the Qualification of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
+                md['step']=5
+                # print(all_data)
+                # print("\n\n\n")
+                # print(reply)
+                logger.info(f"User entered marital status for {h}: {md['marital_status']}")
+                logger.debug(f"State of all_data after entering marital status: {all_data}")
+            else:
+                reply=f" Invalid input. Please enter 'S' for 'Single','M' for 'Married','D' for 'Divorced','W' for 'Widowed'."
+                logger.warning(f"User entered invalid input: {msg}. Expected from the options.")
         # Log the reply message
         logger.info(f"Reply message : {reply}")
         return reply
 
      elif step==5:
-        if msg=="R":
+        if msg=="R" or msg=="r":
             md['step']=4
-            reply = f"Going back!\nEnter marital_status of {h}\nEnter 'S' for 'Single','M' for 'Married','D' for 'Divorced','W' for 'Widowed'.'"
+            reply = f"Going back!\nEnter marital_status of the {h}\nEnter 'S' for 'Single','M' for 'Married','D' for 'Divorced','W' for 'Widowed'.'"
             # print(reply)
             logger.info(f"User entered 'R'. Going back to step 4 for {h}.")
         else:
             md['qualification']=msg
-            reply=f"You entered Qualification: {msg}\nEnter the Occupation of {h}./(Enter 'R' to Re-enter for previous input)"
+            reply=f"You entered Qualification: {msg}\nEnter the Occupation of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
             md['step']=6
             # print(all_data)
             # print("\n\n\n")
@@ -233,14 +252,14 @@ def memberdetail(md,msg,h):
         return reply
      
      elif step==6:
-        if msg=="R":
+        if msg=="R" or msg=="r":
             md['step']=5
-            reply = f"Going back!\nEnter the Qualification of {h}?"
+            reply = f"Going back!\nEnter the Qualification of the {h}?"
             # print(reply)
             logger.info(f"User entered 'R'. Going back to step 5 for {h}.")
         else:
             md['occupation']=msg
-            reply=f"You entered Occupation: {msg}\nExplain the exact nature of duties of {h}./(Enter 'R' to Re-enter for previous input)"
+            reply=f"You entered Occupation: {msg}\nExplain the exact nature of duties of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
             md['step']=7
             # print(all_data)
             # print("\n\n\n")
@@ -253,46 +272,47 @@ def memberdetail(md,msg,h):
         return reply
      
      elif step==7:
-        if msg=="R":
+        if msg=="R" or msg=="r":
             md['step']=6
-            reply = "Going back!\nEnter the Occupation of {h}"
+            reply = "Going back!\nEnter the Occupation of the {h}"
             # print(reply)
             logger.info(f"User entered 'R'. Going back to step 6 for {h}.")
-        if md==all_data["head of family"]:
-            md['exact_nature_of_duties']=msg
-            reply=f"You enter Exact nature of duties: {msg}\nEnter the State of {h}./(Enter 'R' to Re-enter for previous input)"
-            md['step']=8
-            # print(all_data)
-            # print("\n\n\n")
-            # print(reply)
-            logger.info(f" exact nature of duties for {h}: {msg}")
-            logger.debug(f"State of all_data after entering exact nature of duties for {h}: {all_data}")
-            return reply
         else:
-            md['exact_nature_of_duties']=msg
-            md['state']=all_data["head of family"]["state"]
-            md['district']=all_data["head of family"]["district"]
-            md['permanent_address']=all_data["head of family"]["permanent_address"]
-            md['step']=12
-            reply=f"You entered Exact nature of duties: {msg}\nEnter phone no of {h}"
-            # print(all_data)
-            # print("\n\n\n")
-            logger.info(f"User entered exact nature of duties for {h}: {msg}")
-            logger.debug(f"State of all_data after entering exact nature of duties and updating member {h}: {all_data}")
+            if md==all_data["head of family"]:
+                md['exact_nature_of_duties']=msg
+                reply=f"You enter Exact nature of duties: {msg}\nEnter the State of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
+                md['step']=8
+                # print(all_data)
+                # print("\n\n\n")
+                # print(reply)
+                logger.info(f" exact nature of duties for {h}: {msg}")
+                logger.debug(f"State of all_data after entering exact nature of duties for {h}: {all_data}")
+                
+            else:
+                md['exact_nature_of_duties']=msg
+                md['state']=all_data["head of family"]["state"]
+                md['district']=all_data["head of family"]["district"]
+                md['permanent_address']=all_data["head of family"]["permanent_address"]
+                md['step']=12
+                reply=f"You entered Exact nature of duties: {msg}\nEnter phone no of the {h}"
+                # print(all_data)
+                # print("\n\n\n")
+                logger.info(f"User entered exact nature of duties for {h}: {msg}")
+                logger.debug(f"State of all_data after entering exact nature of duties and updating member {h}: {all_data}")
 
-        # Log the reply message to be sent to the user
-            logger.info(f"Reply message : {reply}")
-            return reply
+        
+        logger.info(f"Reply message : {reply}")
+        return reply
      
      elif step==8: 
-        if msg=="R":
+        if msg=="R" or msg=="r":
             md['step']=7
-            reply = f"Going back!\nExplain the exact nature of duties of {h}"
+            reply = f"Going back!\nExplain the exact nature of duties of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
             # print(reply)  
             logger.info(f"User entered 'R'. Going back to step 7 for {h}.")
         else: 
             md['state']=msg
-            reply=f"You entered State: {msg}\nEnter the District of {h}" 
+            reply=f"You entered State: {msg}\nEnter the District of the {h}" 
             md['step']=9
             print(all_data)
             print("\n\n\n")
@@ -305,14 +325,14 @@ def memberdetail(md,msg,h):
         return reply
      
      elif step==9:
-        if msg=="R":
+        if msg=="R" or msg=="r":
             md['step']=8
-            reply = f"Going back!\nEnter the State of {h}"
+            reply = f"Going back!\nEnter the State of the {h}"
             print(reply) 
             logger.info(f"User entered 'R'. Going back to step 8 for {h}.")
         else:
             md['district']=msg
-            reply=f"You entered District: {msg}\nEnter permanent address of {h}"
+            reply=f"You entered District: {msg}\nEnter permanent address of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
             md['step']=10
             print(all_data)
             print("\n\n\n")
@@ -325,14 +345,14 @@ def memberdetail(md,msg,h):
         return reply
      
      elif step==10:
-        if msg=="R":
+        if msg=="R" or msg=="r":
             md['step']=9
-            reply = f"Going back!\nEnter the District of {h}"
+            reply = f"Going back!\nEnter the District of the {h}"
             # print(reply) 
             logger.info(f"User entered 'R'. Going back to step 9 for {h}.")
         else:
             md['permanent_address']=msg
-            reply=f"You entered Permanent address: {msg}\nEnter Landline no of {h}"
+            reply=f"You entered Permanent address: {msg}\nEnter Landline no of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
             md['step']=11
             # print(all_data)
             # print("\n\n\n")
@@ -345,15 +365,15 @@ def memberdetail(md,msg,h):
         return reply
      
      elif step==11:
-        if msg=="R":
+        if msg=="R" or msg=="r":
             md['step']=10
-            reply = f"Going back!\nEnter Permanent Address of {h}"
+            reply = f"Going back!\nEnter Permanent Address of the {h}"
             # print(reply) 
             logger.info(f"User entered 'R'. Going back to step 10 for {h}.")
             
         else:
             md['landline_no']=msg
-            reply=f"You entered Landline no: {msg}\nEnter Phone_no of {h}"
+            reply=f"You entered Landline no: {msg}\nEnter Phone_no of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
             md['step']=12
             # print(all_data)
             # print("\n\n\n")
@@ -367,20 +387,20 @@ def memberdetail(md,msg,h):
         
      
      elif step==12:
-        if msg=="R":
+        if msg=="R" or msg=="r":
             if md==all_data["head of family"]:
                 md['step']=11
-                reply = f"Going back!\nEnter Landline no of {h}"
+                reply = f"Going back!\nEnter Landline no of the {h}"
                 # print(reply)
                 logger.info(f"User entered 'R'. Going back to step 11 for {h}.")
             else:
                 md['step']=7
-                reply = f"Going back!\nExact nature of duties{h}"
+                reply = f"Going back!\nExact nature of duties the {h}"
                 # print(reply)
                 logger.info(f"User entered 'R'. Going back to step 7 for {h}.")
         else:
             md['phone_no']=msg
-            reply=f"You entered Phone no: {msg},\nEnter Alternative_no of {h}"
+            reply=f"You entered Phone no: {msg},\nEnter Alternative_no of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
             md['step']=13
             # print(all_data)
             # print("\n\n\n")
@@ -393,14 +413,14 @@ def memberdetail(md,msg,h):
         return reply
      
      elif step==13:
-        if msg=="R":
+        if msg=="R" or msg=="r":
             md['step']=12
-            reply = f"Going back!\nEnter Phone no of {h}"
+            reply = f"Going back!\nEnter Phone no of the {h}"
             # print(reply)
             logger.info(f"User entered 'R'. Going back to step 12 for {h}.")
         else:
             md['alternative_no']=msg
-            reply=f"You entered Alternative no: {msg}\nEnter email_id of {h}"
+            reply=f"You entered Alternative no: {msg}\nEnter email_id of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
             md['step']=14
             # print(all_data)
             # print("\n\n\n")
@@ -414,15 +434,15 @@ def memberdetail(md,msg,h):
 
      
      elif step==14:
-        if msg=="R":
+        if msg=="R" or msg=="r":
             md['step']=13
-            reply = "Going back!\nEnter Alternative no of {h}"
+            reply = "Going back!\nEnter Alternative no of the {h}"
             # print(reply)
             logger.info(f"User entered 'R'. Going back to step 13 for {h}.")
         else:
             md['email_id']=msg
             md['step']=15
-            reply=f"You entered Email id: {msg}\nEnter Date of Birth of {h}"
+            reply=f"You entered Email id: {msg}\nEnter Date of Birth of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
             
             # print(all_data)
             # print("\n\n\n")
@@ -435,14 +455,14 @@ def memberdetail(md,msg,h):
         return reply
 
      elif step==15:
-        if msg=="R":
+        if msg=="R" or msg=="r":
             md['step']=14
-            reply = "Going back!\nemail id of {h}"
+            reply = "Going back!\nemail id of the {h}"
             # print(reply)
             logger.info(f"User entered 'R'. Going back to step 14 for {h}.")
         else:
             md['birth_date']=msg
-            reply=f"You entered DOB: {msg},\nenter submit"
+            reply=f"You entered DOB: {msg},\nenter submit.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
             md['step']=16
             # print(all_data)
             # print("\n\n\n")
@@ -455,7 +475,7 @@ def memberdetail(md,msg,h):
         return reply
      
      elif step==16:
-        if msg=="R":
+        if msg=="R" or msg=="r":
             md['step']=15
             reply = "Going back!\nEnter DOB of {h}"
             # print(reply)
@@ -522,32 +542,38 @@ def whatsapp_webhook(request):
             
             if message_body.capitalize() in valid_samaj_names:
                 all_data["samaj_name"] = message_body.capitalize()
-                reply = f"Thank you! You entered:\nSamaj: {message_body} \nWhat is the name of your Family?"
+                reply = f"Thank you! You entered:\nSamaj: {message_body} \nWhat is the name of your Family?\n\nor\n\n(Enter 'R' to Re-enter the previous input)."
                 all_data["step"] = 2
                 # print(all_data["samaj_name"])
-                logger.info(f"Samaj name entered: {message_body.capitalize()}")
+                logger.info(f"Samaj name entered: {message_body.capitalize()},\n reply from user:{reply}")
             else:
                 reply = "Invalid Samaj name. Please enter one of the following: Brahmin, Kshatriya, Vaishya, Shudra."
-            print("\n\n\n")
-            # print(reply)
-            logger.warning(f"Invalid Samaj name entered: {message_body} Please enter one of the following: Brahmin, Kshatriya, Vaishya, Shudra.")
-            print("\n\n\n")
+                print("\n\n\n")
+                    # print(reply)
+                logger.warning(f"Invalid Samaj name entered: {message_body} Please enter one of the following: Brahmin, Kshatriya, Vaishya, Shudra.")
+                print("\n\n\n")
 
         elif step==2:
-            all_data["surname"] = message_body
-            reply=f"You entered:\nFamily name: {message_body} \nHow many members are there in your family?/(Enter 'R' to Re-enter previous input)"
-            all_data["step"] = 3
+            if message_body=="R" or message_body=="r":
+                reply = "Going back!\nWhat is the name of your Samaj?(Please enter one of the following: Brahmin, Kshatriya, Vaishya, Shudra)"
+                # print(reply)
+                logger.info(f"User chose 'R'. Reply: {reply}")
+                all_data["step"] = 1
+            else:
+                all_data["surname"] = message_body
+                reply=f"You entered:\nFamily name: {message_body} \nHow many members are there in your family?\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
+                all_data["step"] = 3
 
-            print("\n\n\n")
-            # print(reply)
-            logger.info(f" {reply}")
-            print("\n\n\n")
-  
+                print("\n\n\n")
+                # print(reply)
+                logger.info(f" {reply}")
+                print("\n\n\n")
+    
 
 
                 
         elif step == 3:
-            if message_body=="R":
+            if message_body=="R" or message_body=="r":
                 reply = "Going back!\nWhat is the name of your family?"
                 # print(reply)
                 logger.info(f"User chose 'R'. Reply: {reply}")
@@ -562,14 +588,14 @@ def whatsapp_webhook(request):
                     all_data["members_list"]['current_member']=1
 
                     
-                    reply = f"You have total {message_body} members in the family\nNeed to enter the details of the Head of the family, enter ok to continue/(Enter 'R' to Re-enter the previous input)"
+                    reply = f"You have total {message_body} members in the family.\nNeed to enter the details of the Head of the family, enter 'ok' to continue.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
                     all_data["step"] = 4  
                     print("\n\n\n")
                     # print(reply)
                     logger.info(f"User entered valid number of total members: {message_body}. Reply: {reply}")
                     print("\n\n\n")
                 else:
-                    reply=f"❌ Invalid input. Please enter a valid number."
+                    reply=f" Invalid input. Please enter a valid number."
                     logger.warning(f"User entered invalid input: {message_body}. Expected a positive number.")
                 
 
@@ -582,16 +608,16 @@ def whatsapp_webhook(request):
                     # all_data["head of family"]["step"]-=1
                 else:
                     pass
-                reply=memberdetail(all_data["head of family"],msg,"head of the family")
+                reply=memberdetail(all_data["head of family"],msg,"Head of the family")
                 # print("step in webhook ",all_data["head of family"]["step"])
                 
-                if all_data["head of family"]["step"]==16:
+                if all_data["head of family"]["step"]==17:
                         # print("step in webhook and in if ",all_data["head of family"]["step"])
-                        logger.info(f"Step reached 16. Updating step to 5. Current all_data: {all_data}")
+                        logger.info(f"Step reached 17. Updating step to 5. Current all_data: {all_data}")
                         all_data["step"] = 5
                         # print(all_data)
 
-            elif message_body=='R':
+            elif message_body=='R' or message_body=="r":
                 all_data["step"] = 3
                 reply = "Going back!\nHow many members are there in your family?"
                 # print(reply)
@@ -606,15 +632,15 @@ def whatsapp_webhook(request):
                 if 'step' not in all_data["head of family"]:
                     all_data["head of family"]["step"]=0
 
-                reply=memberdetail(all_data["head of family"],msg,"head of the family")
+                reply=memberdetail(all_data["head of family"],msg,"Head of the family")
                 # print("step in webhook ",all_data["head of family"]["step"])
                 logger.debug(f"Step in webhook after initialization: {all_data['head of family']['step']}")
 
-                if all_data["head of family"]["step"]==16:
+                if all_data["head of family"]["step"]==17:
                         print("step in webhook and in if ",all_data["head of family"]["step"])
                         all_data["step"] = 5
                         # print(all_data)
-                        logger.info(f"Step reached 16. Updating step to 5. Current all_data: {all_data}")
+                        logger.info(f"Step reached 17. Updating step to 5. Current all_data: {all_data}")
 
 
         elif step==5:
@@ -646,7 +672,7 @@ def whatsapp_webhook(request):
 
              reply=memberdetail(all_data["members_list"]['the_members'][f"member{c}"],msg,f"member{c+1}")
              
-             if all_data["members_list"]['the_members'][f"member{c}"]["step"]==15:
+             if all_data["members_list"]['the_members'][f"member{c}"]["step"]==16:
                     all_data["members_list"]['current_member']=all_data["members_list"]['current_member']+1
                     print("\n\n\n")
                     logger.info(f"Member {c} reached step 15. Incrementing current_member to {all_data['members_list']['current_member']}")
