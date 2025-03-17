@@ -1838,3 +1838,726 @@ INFO 2025-03-17 10:40:23,102 basehttp "GET /message_to/ HTTP/1.1" 200 24
 INFO 2025-03-17 10:52:40,117 basehttp "GET /message_to/ HTTP/1.1" 200 24
 INFO 2025-03-17 11:24:34,193 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
 INFO 2025-03-17 11:24:35,230 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:21:26,069 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:21:26,738 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:23:52,954 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:23:53,652 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:23:54,874 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:23:55,522 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:23:57,730 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:23:58,334 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:23:59,529 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:24:00,074 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:24:02,288 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:24:02,904 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:24:04,078 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:24:04,715 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:24:05,908 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:24:06,435 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:24:18,902 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:24:19,522 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:28:05,386 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:28:06,100 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:28:21,633 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:28:22,204 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:28:26,096 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:28:26,648 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:28:31,535 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:28:32,139 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:28:34,024 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:28:34,658 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:28:36,873 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:28:37,447 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:28:53,971 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:28:54,523 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:30:33,890 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:30:34,607 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:30:38,869 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:30:39,431 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:30:48,431 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:30:49,013 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:30:54,934 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:30:55,515 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:30:57,316 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:30:57,926 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:31:00,741 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:31:01,311 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:31:03,099 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:31:03,643 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:31:05,410 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:31:05,964 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:31:12,911 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:31:13,485 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:31:15,320 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:31:15,893 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:31:17,682 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:31:18,253 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:31:20,069 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:31:20,641 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:31:21,825 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:31:22,349 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:31:23,554 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:31:24,099 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:31:29,382 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:31:29,972 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:31:35,254 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:31:35,809 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:31:38,040 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:31:38,728 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:32:27,997 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:32:28,590 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:32:31,844 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:32:32,432 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:32:38,743 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:32:39,305 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:33:02,746 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:33:03,393 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:33:05,222 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:33:05,775 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:33:08,634 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:33:09,189 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:33:14,073 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:33:14,634 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:33:17,500 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:33:18,149 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:33:20,972 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:33:21,672 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:33:23,475 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:33:24,123 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:34:58,670 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:34:59,295 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:35:01,060 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:35:01,683 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:36:28,967 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:36:29,572 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:36:31,798 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:36:32,361 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:36:50,622 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:36:51,202 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:37:00,233 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:37:00,781 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:37:03,619 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:37:04,199 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:37:10,514 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:37:11,032 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:37:39,596 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:37:40,178 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:37:43,049 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:37:43,591 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:37:49,481 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:37:50,104 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:38:15,864 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:38:16,612 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:38:23,653 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:38:24,192 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:38:52,874 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:38:53,456 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:38:59,377 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:38:59,928 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:39:05,844 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:39:06,406 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:42:32,173 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:42:32,753 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:44:36,155 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:44:36,739 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:45:45,623 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:45:46,223 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:52:00,414 views Received WhatsApp message from whatsapp:+917775889251: start
+DEBUG 2025-03-17 12:52:00,414 views Current step: 0
+INFO 2025-03-17 12:52:00,415 views Reply to user: Welcome! What is the name of your Samaj? (Please enter one of the following: Brahmin, Kshatriya, Vaishya, Shudra)
+INFO 2025-03-17 12:52:00,416 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 191
+INFO 2025-03-17 12:52:13,310 views Received WhatsApp message from whatsapp:+917775889251: Brahmin
+DEBUG 2025-03-17 12:52:13,311 views Current step: 1
+INFO 2025-03-17 12:52:13,311 views Samaj name entered: Brahmin,
+ reply from user:Thank you! You entered:
+Samaj: Brahmin 
+What is the name of your Family?
+
+or
+
+(Enter 'R' to Re-enter the previous input).
+INFO 2025-03-17 12:52:13,311 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 199
+INFO 2025-03-17 12:52:25,940 views Received WhatsApp message from whatsapp:+917775889251: shri
+DEBUG 2025-03-17 12:52:25,940 views Current step: 2
+INFO 2025-03-17 12:52:25,940 views  You entered:
+Family name: shri 
+How many members are there in your family?
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 12:52:25,941 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 200
+INFO 2025-03-17 12:52:31,501 views Received WhatsApp message from whatsapp:+917775889251: 2
+DEBUG 2025-03-17 12:52:31,501 views Current step: 3
+INFO 2025-03-17 12:52:31,501 views User entered valid number of total members: 2. Reply: You have total 2 members in the family.
+Need to enter the details of the Head of the family, enter 'ok' to continue.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 12:52:31,502 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 242
+INFO 2025-03-17 12:52:41,922 views Received WhatsApp message from whatsapp:+917775889251: ok
+DEBUG 2025-03-17 12:52:41,922 views Current step: 4
+INFO 2025-03-17 12:52:41,922 views Initializing head of family with number: whatsapp:+917775889251
+INFO 2025-03-17 12:52:41,922 views Step 0: Requesting name for Head of the family. Reply: Enter name of the Head of the family
+DEBUG 2025-03-17 12:52:41,922 views Message received : ok
+DEBUG 2025-03-17 12:52:41,922 views all_data before reply: {'info_from_number': 'whatsapp:+917775889251', 'step': 1}
+DEBUG 2025-03-17 12:52:41,922 views Step in webhook after initialization: 1
+INFO 2025-03-17 12:52:41,923 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 114
+INFO 2025-03-17 12:52:50,318 views Received WhatsApp message from whatsapp:+917775889251: ajay
+DEBUG 2025-03-17 12:52:50,318 views Current step: 4
+INFO 2025-03-17 12:52:50,318 views  Reply: You entered Name: ajay
+Enter the age of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+DEBUG 2025-03-17 12:52:50,318 views all_data after step 1: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 2, 'name': 'ajay'}}
+INFO 2025-03-17 12:52:50,319 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 189
+INFO 2025-03-17 12:52:58,515 views Received WhatsApp message from whatsapp:+917775889251: 23
+DEBUG 2025-03-17 12:52:58,515 views Current step: 4
+INFO 2025-03-17 12:52:58,515 views User entered age for Head of the family: 23
+DEBUG 2025-03-17 12:52:58,515 views State of all_data after entering age: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 3, 'name': 'ajay', 'age': '23'}}
+INFO 2025-03-17 12:52:58,515 views Reply message : You entered age: 23,
+Enter the gender of the Head of the family
+Enter 'M' for 'Male', 'F' for 'Female', 'O' for 'Other'.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 12:52:58,516 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 246
+INFO 2025-03-17 12:53:05,538 views Received WhatsApp message from whatsapp:+917775889251: M
+DEBUG 2025-03-17 12:53:05,538 views Current step: 4
+INFO 2025-03-17 12:53:05,538 views User entered gender for Head of the family: M
+DEBUG 2025-03-17 12:53:05,538 views State of all_data after entering gender: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'name': 'ajay', 'age': '23', 'gender': 'M'}}
+INFO 2025-03-17 12:53:05,538 views Reply message : You entered Gender: M
+Enter marital_status of the Head of the family
+Enter 'S' for 'Single','M' for 'Married','D' for 'Divorced','W' for 'Widowed'.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 12:53:05,539 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 273
+INFO 2025-03-17 12:53:11,059 views Received WhatsApp message from whatsapp:+917775889251: S
+DEBUG 2025-03-17 12:53:11,059 views Current step: 4
+INFO 2025-03-17 12:53:11,059 views User entered marital status for Head of the family: S
+DEBUG 2025-03-17 12:53:11,059 views State of all_data after entering marital status: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 5, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S'}}
+INFO 2025-03-17 12:53:11,059 views Reply message : You entered Marital Status: S
+Enter the Qualification of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 12:53:11,060 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 206
+INFO 2025-03-17 12:53:22,120 views Received WhatsApp message from whatsapp:+917775889251: phd
+DEBUG 2025-03-17 12:53:22,120 views Current step: 4
+INFO 2025-03-17 12:53:22,120 views User entered qualification for Head of the family: phd
+DEBUG 2025-03-17 12:53:22,120 views State of all_data after entering qualification: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 6, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S', 'qualification': 'phd'}}
+INFO 2025-03-17 12:53:22,120 views Reply message : You entered Qualification: phd
+Enter the Occupation of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 12:53:22,120 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 204
+INFO 2025-03-17 12:53:36,686 views Received WhatsApp message from whatsapp:+917775889251: teacher
+DEBUG 2025-03-17 12:53:36,686 views Current step: 4
+INFO 2025-03-17 12:53:36,686 views User entered occupation for Head of the family: teacher
+DEBUG 2025-03-17 12:53:36,686 views State of all_data after entering occupation: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 7, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S', 'qualification': 'phd', 'occupation': 'teacher'}}
+INFO 2025-03-17 12:53:36,686 views Reply message : You entered Occupation: teacher
+Explain the exact nature of duties of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 12:53:36,687 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 219
+INFO 2025-03-17 12:53:44,881 views Received WhatsApp message from whatsapp:+917775889251: teacher
+DEBUG 2025-03-17 12:53:44,881 views Current step: 4
+INFO 2025-03-17 12:53:44,881 views  exact nature of duties for Head of the family: teacher
+DEBUG 2025-03-17 12:53:44,881 views State of all_data after entering exact nature of duties for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 8, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S', 'qualification': 'phd', 'occupation': 'teacher', 'exact_nature_of_duties': 'teacher'}}
+INFO 2025-03-17 12:53:44,881 views Reply message : You enter Exact nature of duties: teacher
+Enter the State of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 12:53:44,882 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 210
+INFO 2025-03-17 12:53:51,948 views Received WhatsApp message from whatsapp:+917775889251: fggh
+DEBUG 2025-03-17 12:53:51,948 views Current step: 4
+INFO 2025-03-17 12:53:51,949 views User entered state for Head of the family: fggh
+DEBUG 2025-03-17 12:53:51,949 views State of all_data after entering state for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 9, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S', 'qualification': 'phd', 'occupation': 'teacher', 'exact_nature_of_duties': 'teacher', 'state': 'fggh'}}
+INFO 2025-03-17 12:53:51,949 views Reply message : You entered State: fggh
+Enter the District of the Head of the family
+INFO 2025-03-17 12:53:51,950 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 146
+INFO 2025-03-17 12:54:03,173 views Received WhatsApp message from whatsapp:+917775889251: fgtyh
+DEBUG 2025-03-17 12:54:03,173 views Current step: 4
+INFO 2025-03-17 12:54:03,174 views User entered district for Head of the family: fgtyh
+DEBUG 2025-03-17 12:54:03,174 views State of all_data after entering district for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 10, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S', 'qualification': 'phd', 'occupation': 'teacher', 'exact_nature_of_duties': 'teacher', 'state': 'fggh', 'district': 'fgtyh'}}
+INFO 2025-03-17 12:54:03,174 views Reply message : You entered District: fgtyh
+Enter permanent address of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 12:54:03,174 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 204
+INFO 2025-03-17 12:54:10,590 views Received WhatsApp message from whatsapp:+917775889251: R
+DEBUG 2025-03-17 12:54:10,590 views Current step: 4
+INFO 2025-03-17 12:54:10,590 views User entered 'R'. Going back to step 9 for Head of the family.
+INFO 2025-03-17 12:54:10,590 views Reply message : Going back!
+Enter the District of the Head of the family
+INFO 2025-03-17 12:54:10,591 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 134
+INFO 2025-03-17 12:54:17,714 views Received WhatsApp message from whatsapp:+917775889251: R
+DEBUG 2025-03-17 12:54:17,714 views Current step: 4
+INFO 2025-03-17 12:54:17,714 views User entered 'R'. Going back to step 8 for Head of the family.
+INFO 2025-03-17 12:54:17,714 views Reply message : Going back!
+Enter the State of the Head of the family
+INFO 2025-03-17 12:54:17,715 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 131
+INFO 2025-03-17 12:54:33,704 views Received WhatsApp message from whatsapp:+917775889251: up
+DEBUG 2025-03-17 12:54:33,705 views Current step: 4
+INFO 2025-03-17 12:54:33,705 views User entered state for Head of the family: up
+DEBUG 2025-03-17 12:54:33,705 views State of all_data after entering state for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 9, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S', 'qualification': 'phd', 'occupation': 'teacher', 'exact_nature_of_duties': 'teacher', 'state': 'up', 'district': 'fgtyh'}}
+INFO 2025-03-17 12:54:33,706 views Reply message : You entered State: up
+Enter the District of the Head of the family
+INFO 2025-03-17 12:54:33,706 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 144
+INFO 2025-03-17 12:54:42,243 views Received WhatsApp message from whatsapp:+917775889251: pp
+DEBUG 2025-03-17 12:54:42,244 views Current step: 4
+INFO 2025-03-17 12:54:42,244 views User entered district for Head of the family: pp
+DEBUG 2025-03-17 12:54:42,245 views State of all_data after entering district for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 10, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S', 'qualification': 'phd', 'occupation': 'teacher', 'exact_nature_of_duties': 'teacher', 'state': 'up', 'district': 'pp'}}
+INFO 2025-03-17 12:54:42,245 views Reply message : You entered District: pp
+Enter permanent address of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 12:54:42,245 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 201
+INFO 2025-03-17 12:54:50,501 views Received WhatsApp message from whatsapp:+917775889251: asdf
+DEBUG 2025-03-17 12:54:50,502 views Current step: 4
+INFO 2025-03-17 12:54:50,502 views User entered permanent address for Head of the family: asdf
+DEBUG 2025-03-17 12:54:50,502 views State of all_data after entering permanent address for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 11, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S', 'qualification': 'phd', 'occupation': 'teacher', 'exact_nature_of_duties': 'teacher', 'state': 'up', 'district': 'pp', 'permanent_address': 'asdf'}}
+INFO 2025-03-17 12:54:50,502 views Reply message : You entered Permanent address: asdf
+Enter Landline no of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 12:54:50,502 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 206
+INFO 2025-03-17 12:54:56,482 views Received WhatsApp message from whatsapp:+917775889251: 1234
+DEBUG 2025-03-17 12:54:56,483 views Current step: 4
+INFO 2025-03-17 12:54:56,483 views User entered landline number for Head of the family: 1234
+DEBUG 2025-03-17 12:54:56,483 views State of all_data after entering landline number for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 12, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S', 'qualification': 'phd', 'occupation': 'teacher', 'exact_nature_of_duties': 'teacher', 'state': 'up', 'district': 'pp', 'permanent_address': 'asdf', 'landline_no': '1234'}}
+INFO 2025-03-17 12:54:56,483 views Reply message : You entered Landline no: 1234
+Enter the Phone number of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 12:54:56,483 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 205
+INFO 2025-03-17 12:55:04,205 views Received WhatsApp message from whatsapp:+917775889251: 1234
+DEBUG 2025-03-17 12:55:04,205 views Current step: 4
+ERROR 2025-03-17 12:55:04,353 log Internal Server Error: /whatsapp_webhook/
+Traceback (most recent call last):
+  File "C:\Users\ankii\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ankii\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ankii\AppData\Roaming\Python\Python313\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py", line 619, in whatsapp_webhook
+    reply=memberdetail(all_data["head of family"],msg,"Head of the family")
+  File "C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py", line 402, in memberdetail
+    if not msg.isdgit() and len(msg)!=10:
+           ^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'isdgit'. Did you mean: 'isdigit'?
+ERROR 2025-03-17 12:55:04,356 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 500 75947
+INFO 2025-03-17 12:55:35,740 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:55:36,307 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:55:45,390 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:55:45,998 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:56:19,995 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:56:20,602 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:57:44,845 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:57:45,450 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:57:48,302 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:57:48,855 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:57:51,646 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 12:57:52,192 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 12:59:16,183 views Received WhatsApp message from whatsapp:+917775889251: start
+DEBUG 2025-03-17 12:59:16,183 views Current step: 0
+INFO 2025-03-17 12:59:16,183 views Reply to user: Welcome! What is the name of your Samaj? (Please enter one of the following: Brahmin, Kshatriya, Vaishya, Shudra)
+INFO 2025-03-17 12:59:16,184 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 191
+INFO 2025-03-17 12:59:31,632 views Received WhatsApp message from whatsapp:+917775889251: Brahmin
+DEBUG 2025-03-17 12:59:31,632 views Current step: 1
+INFO 2025-03-17 12:59:31,632 views Samaj name entered: Brahmin,
+ reply from user:Thank you! You entered:
+Samaj: Brahmin 
+What is the name of your Family?
+
+or
+
+(Enter 'R' to Re-enter the previous input).
+INFO 2025-03-17 12:59:31,632 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 199
+INFO 2025-03-17 12:59:40,004 views Received WhatsApp message from whatsapp:+917775889251: shri
+DEBUG 2025-03-17 12:59:40,004 views Current step: 2
+INFO 2025-03-17 12:59:40,004 views  You entered:
+Family name: shri 
+How many members are there in your family?
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 12:59:40,005 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 200
+INFO 2025-03-17 12:59:44,806 views Received WhatsApp message from whatsapp:+917775889251: 2
+DEBUG 2025-03-17 12:59:44,806 views Current step: 3
+INFO 2025-03-17 12:59:44,806 views User entered valid number of total members: 2. Reply: You have total 2 members in the family.
+Need to enter the details of the Head of the family, enter 'ok' to continue.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 12:59:44,807 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 242
+INFO 2025-03-17 12:59:53,988 views Received WhatsApp message from whatsapp:+917775889251: ok
+DEBUG 2025-03-17 12:59:53,988 views Current step: 4
+INFO 2025-03-17 12:59:53,988 views Initializing head of family with number: whatsapp:+917775889251
+INFO 2025-03-17 12:59:53,988 views Step 0: Requesting name for Head of the family. Reply: Enter name of the Head of the family
+DEBUG 2025-03-17 12:59:53,988 views Message received : ok
+DEBUG 2025-03-17 12:59:53,988 views all_data before reply: {'info_from_number': 'whatsapp:+917775889251', 'step': 1}
+DEBUG 2025-03-17 12:59:53,989 views Step in webhook after initialization: 1
+INFO 2025-03-17 12:59:53,989 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 114
+INFO 2025-03-17 13:00:01,195 views Received WhatsApp message from whatsapp:+917775889251: ajay
+DEBUG 2025-03-17 13:00:01,195 views Current step: 4
+INFO 2025-03-17 13:00:01,195 views  Reply: You entered Name: ajay
+Enter the age of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+DEBUG 2025-03-17 13:00:01,195 views all_data after step 1: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 2, 'name': 'ajay'}}
+INFO 2025-03-17 13:00:01,195 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 189
+INFO 2025-03-17 13:00:07,079 views Received WhatsApp message from whatsapp:+917775889251: 23
+DEBUG 2025-03-17 13:00:07,079 views Current step: 4
+INFO 2025-03-17 13:00:07,079 views User entered age for Head of the family: 23
+DEBUG 2025-03-17 13:00:07,079 views State of all_data after entering age: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 3, 'name': 'ajay', 'age': '23'}}
+INFO 2025-03-17 13:00:07,079 views Reply message : You entered age: 23,
+Enter the gender of the Head of the family
+Enter 'M' for 'Male', 'F' for 'Female', 'O' for 'Other'.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:00:07,080 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 246
+INFO 2025-03-17 13:00:24,394 views Received WhatsApp message from whatsapp:+917775889251: M
+DEBUG 2025-03-17 13:00:24,394 views Current step: 4
+INFO 2025-03-17 13:00:24,395 views User entered gender for Head of the family: M
+DEBUG 2025-03-17 13:00:24,395 views State of all_data after entering gender: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'name': 'ajay', 'age': '23', 'gender': 'M'}}
+INFO 2025-03-17 13:00:24,395 views Reply message : You entered Gender: M
+Enter marital_status of the Head of the family
+Enter 'S' for 'Single','M' for 'Married','D' for 'Divorced','W' for 'Widowed'.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:00:24,395 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 273
+INFO 2025-03-17 13:00:30,583 views Received WhatsApp message from whatsapp:+917775889251: S
+DEBUG 2025-03-17 13:00:30,583 views Current step: 4
+INFO 2025-03-17 13:00:30,583 views User entered marital status for Head of the family: S
+DEBUG 2025-03-17 13:00:30,583 views State of all_data after entering marital status: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 5, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S'}}
+INFO 2025-03-17 13:00:30,584 views Reply message : You entered Marital Status: S
+Enter the Qualification of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:00:30,584 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 206
+INFO 2025-03-17 13:00:38,262 views Received WhatsApp message from whatsapp:+917775889251: phd
+DEBUG 2025-03-17 13:00:38,262 views Current step: 4
+INFO 2025-03-17 13:00:38,262 views User entered qualification for Head of the family: phd
+DEBUG 2025-03-17 13:00:38,262 views State of all_data after entering qualification: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 6, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S', 'qualification': 'phd'}}
+INFO 2025-03-17 13:00:38,262 views Reply message : You entered Qualification: phd
+Enter the Occupation of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:00:38,263 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 204
+INFO 2025-03-17 13:01:06,799 views Received WhatsApp message from whatsapp:+917775889251: nbn
+DEBUG 2025-03-17 13:01:06,799 views Current step: 4
+INFO 2025-03-17 13:01:06,800 views User entered occupation for Head of the family: nbn
+DEBUG 2025-03-17 13:01:06,800 views State of all_data after entering occupation: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 7, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S', 'qualification': 'phd', 'occupation': 'nbn'}}
+INFO 2025-03-17 13:01:06,800 views Reply message : You entered Occupation: nbn
+Explain the exact nature of duties of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:01:06,801 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 215
+INFO 2025-03-17 13:01:14,815 views Received WhatsApp message from whatsapp:+917775889251: bvnvbn
+DEBUG 2025-03-17 13:01:14,815 views Current step: 4
+INFO 2025-03-17 13:01:14,815 views  exact nature of duties for Head of the family: bvnvbn
+DEBUG 2025-03-17 13:01:14,815 views State of all_data after entering exact nature of duties for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 8, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S', 'qualification': 'phd', 'occupation': 'nbn', 'exact_nature_of_duties': 'bvnvbn'}}
+INFO 2025-03-17 13:01:14,815 views Reply message : You enter Exact nature of duties: bvnvbn
+Enter the State of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:01:14,816 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 209
+INFO 2025-03-17 13:01:23,017 views Received WhatsApp message from whatsapp:+917775889251: bvn
+DEBUG 2025-03-17 13:01:23,017 views Current step: 4
+INFO 2025-03-17 13:01:23,018 views User entered state for Head of the family: bvn
+DEBUG 2025-03-17 13:01:23,018 views State of all_data after entering state for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 9, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S', 'qualification': 'phd', 'occupation': 'nbn', 'exact_nature_of_duties': 'bvnvbn', 'state': 'bvn'}}
+INFO 2025-03-17 13:01:23,018 views Reply message : You entered State: bvn
+Enter the District of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:01:23,018 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 194
+INFO 2025-03-17 13:01:29,605 views Received WhatsApp message from whatsapp:+917775889251: gfngf
+DEBUG 2025-03-17 13:01:29,605 views Current step: 4
+INFO 2025-03-17 13:01:29,606 views User entered district for Head of the family: gfngf
+DEBUG 2025-03-17 13:01:29,606 views State of all_data after entering district for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 10, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S', 'qualification': 'phd', 'occupation': 'nbn', 'exact_nature_of_duties': 'bvnvbn', 'state': 'bvn', 'district': 'gfngf'}}
+INFO 2025-03-17 13:01:29,606 views Reply message : You entered District: gfngf
+Enter permanent address of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:01:29,607 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 204
+INFO 2025-03-17 13:01:39,549 views Received WhatsApp message from whatsapp:+917775889251: fgbngf
+DEBUG 2025-03-17 13:01:39,549 views Current step: 4
+INFO 2025-03-17 13:01:39,549 views User entered permanent address for Head of the family: fgbngf
+DEBUG 2025-03-17 13:01:39,550 views State of all_data after entering permanent address for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 11, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S', 'qualification': 'phd', 'occupation': 'nbn', 'exact_nature_of_duties': 'bvnvbn', 'state': 'bvn', 'district': 'gfngf', 'permanent_address': 'fgbngf'}}
+INFO 2025-03-17 13:01:39,550 views Reply message : You entered Permanent address: fgbngf
+Enter Landline number of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:01:39,550 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 212
+INFO 2025-03-17 13:01:51,405 views Received WhatsApp message from whatsapp:+917775889251: gbb
+DEBUG 2025-03-17 13:01:51,406 views Current step: 4
+INFO 2025-03-17 13:01:51,406 views User entered landline number for Head of the family: gbb
+DEBUG 2025-03-17 13:01:51,406 views State of all_data after entering landline number for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 12, 'name': 'ajay', 'age': '23', 'gender': 'M', 'marital_status': 'S', 'qualification': 'phd', 'occupation': 'nbn', 'exact_nature_of_duties': 'bvnvbn', 'state': 'bvn', 'district': 'gfngf', 'permanent_address': 'fgbngf', 'landline_no': 'gbb'}}
+INFO 2025-03-17 13:01:51,406 views Reply message : You entered Landline no: gbb
+Enter the Phone number of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:01:51,407 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 204
+INFO 2025-03-17 13:02:03,078 views Received WhatsApp message from whatsapp:+917775889251: 12345
+DEBUG 2025-03-17 13:02:03,079 views Current step: 4
+ERROR 2025-03-17 13:02:03,103 log Internal Server Error: /whatsapp_webhook/
+Traceback (most recent call last):
+  File "C:\Users\ankii\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ankii\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ankii\AppData\Roaming\Python\Python313\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py", line 619, in whatsapp_webhook
+    reply=memberdetail(all_data["head of family"],msg,"Head of the family")
+  File "C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py", line 402, in memberdetail
+    if not msg.isidgit() and len(msg)!=10:
+           ^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'isidgit'. Did you mean: 'isdigit'?
+ERROR 2025-03-17 13:02:03,107 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 500 75963
+INFO 2025-03-17 13:02:42,818 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 13:02:43,390 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 13:02:45,192 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 13:02:45,861 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 13:02:58,808 views Received WhatsApp message from whatsapp:+917775889251: f
+DEBUG 2025-03-17 13:02:58,808 views Current step: 0
+INFO 2025-03-17 13:02:58,809 views Reply to user: Welcome! What is the name of your Samaj? (Please enter one of the following: Brahmin, Kshatriya, Vaishya, Shudra)
+INFO 2025-03-17 13:02:58,809 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 191
+INFO 2025-03-17 13:03:08,836 views Received WhatsApp message from whatsapp:+917775889251: brahmin
+DEBUG 2025-03-17 13:03:08,836 views Current step: 1
+INFO 2025-03-17 13:03:08,836 views Samaj name entered: Brahmin,
+ reply from user:Thank you! You entered:
+Samaj: brahmin 
+What is the name of your Family?
+
+or
+
+(Enter 'R' to Re-enter the previous input).
+INFO 2025-03-17 13:03:08,837 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 199
+INFO 2025-03-17 13:03:15,962 views Received WhatsApp message from whatsapp:+917775889251: shri
+DEBUG 2025-03-17 13:03:15,962 views Current step: 2
+INFO 2025-03-17 13:03:15,962 views  You entered:
+Family name: shri 
+How many members are there in your family?
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:03:15,963 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 200
+INFO 2025-03-17 13:03:27,063 views Received WhatsApp message from whatsapp:+917775889251: 2
+DEBUG 2025-03-17 13:03:27,063 views Current step: 3
+INFO 2025-03-17 13:03:27,064 views User entered valid number of total members: 2. Reply: You have total 2 members in the family.
+Need to enter the details of the Head of the family, enter 'ok' to continue.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:03:27,064 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 242
+INFO 2025-03-17 13:03:33,864 views Received WhatsApp message from whatsapp:+917775889251: ok
+DEBUG 2025-03-17 13:03:33,864 views Current step: 4
+INFO 2025-03-17 13:03:33,864 views Initializing head of family with number: whatsapp:+917775889251
+INFO 2025-03-17 13:03:33,864 views Step 0: Requesting name for Head of the family. Reply: Enter name of the Head of the family
+DEBUG 2025-03-17 13:03:33,864 views Message received : ok
+DEBUG 2025-03-17 13:03:33,864 views all_data before reply: {'info_from_number': 'whatsapp:+917775889251', 'step': 1}
+DEBUG 2025-03-17 13:03:33,864 views Step in webhook after initialization: 1
+INFO 2025-03-17 13:03:33,865 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 114
+INFO 2025-03-17 13:03:40,245 views Received WhatsApp message from whatsapp:+917775889251: hfjf
+DEBUG 2025-03-17 13:03:40,245 views Current step: 4
+INFO 2025-03-17 13:03:40,245 views  Reply: You entered Name: hfjf
+Enter the age of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+DEBUG 2025-03-17 13:03:40,245 views all_data after step 1: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 2, 'name': 'hfjf'}}
+INFO 2025-03-17 13:03:40,246 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 189
+INFO 2025-03-17 13:03:46,697 views Received WhatsApp message from whatsapp:+917775889251: 23
+DEBUG 2025-03-17 13:03:46,697 views Current step: 4
+INFO 2025-03-17 13:03:46,697 views User entered age for Head of the family: 23
+DEBUG 2025-03-17 13:03:46,697 views State of all_data after entering age: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 3, 'name': 'hfjf', 'age': '23'}}
+INFO 2025-03-17 13:03:46,697 views Reply message : You entered age: 23,
+Enter the gender of the Head of the family
+Enter 'M' for 'Male', 'F' for 'Female', 'O' for 'Other'.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:03:46,698 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 246
+INFO 2025-03-17 13:03:57,458 views Received WhatsApp message from whatsapp:+917775889251: M
+DEBUG 2025-03-17 13:03:57,459 views Current step: 4
+INFO 2025-03-17 13:03:57,459 views User entered gender for Head of the family: M
+DEBUG 2025-03-17 13:03:57,459 views State of all_data after entering gender: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'name': 'hfjf', 'age': '23', 'gender': 'M'}}
+INFO 2025-03-17 13:03:57,459 views Reply message : You entered Gender: M
+Enter marital_status of the Head of the family
+Enter 'S' for 'Single','M' for 'Married','D' for 'Divorced','W' for 'Widowed'.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:03:57,459 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 273
+INFO 2025-03-17 13:03:58,665 views Received WhatsApp message from whatsapp:+917775889251: M
+DEBUG 2025-03-17 13:03:58,665 views Current step: 4
+INFO 2025-03-17 13:03:58,665 views User entered marital status for Head of the family: M
+DEBUG 2025-03-17 13:03:58,666 views State of all_data after entering marital status: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 5, 'name': 'hfjf', 'age': '23', 'gender': 'M', 'marital_status': 'M'}}
+INFO 2025-03-17 13:03:58,666 views Reply message : You entered Marital Status: M
+Enter the Qualification of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:03:58,666 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 206
+INFO 2025-03-17 13:04:11,132 views Received WhatsApp message from whatsapp:+917775889251: hfjjf
+DEBUG 2025-03-17 13:04:11,132 views Current step: 4
+INFO 2025-03-17 13:04:11,132 views User entered qualification for Head of the family: hfjjf
+DEBUG 2025-03-17 13:04:11,132 views State of all_data after entering qualification: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 6, 'name': 'hfjf', 'age': '23', 'gender': 'M', 'marital_status': 'M', 'qualification': 'hfjjf'}}
+INFO 2025-03-17 13:04:11,133 views Reply message : You entered Qualification: hfjjf
+Enter the Occupation of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:04:11,133 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 206
+INFO 2025-03-17 13:04:33,362 views Received WhatsApp message from whatsapp:+917775889251: rtgbh
+DEBUG 2025-03-17 13:04:33,362 views Current step: 4
+INFO 2025-03-17 13:04:33,362 views User entered occupation for Head of the family: rtgbh
+DEBUG 2025-03-17 13:04:33,362 views State of all_data after entering occupation: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 7, 'name': 'hfjf', 'age': '23', 'gender': 'M', 'marital_status': 'M', 'qualification': 'hfjjf', 'occupation': 'rtgbh'}}
+INFO 2025-03-17 13:04:33,362 views Reply message : You entered Occupation: rtgbh
+Explain the exact nature of duties of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:04:33,363 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 217
+INFO 2025-03-17 13:05:19,377 views Received WhatsApp message from whatsapp:+917775889251: tkktgk
+DEBUG 2025-03-17 13:05:19,377 views Current step: 4
+INFO 2025-03-17 13:05:19,377 views  exact nature of duties for Head of the family: tkktgk
+DEBUG 2025-03-17 13:05:19,378 views State of all_data after entering exact nature of duties for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 8, 'name': 'hfjf', 'age': '23', 'gender': 'M', 'marital_status': 'M', 'qualification': 'hfjjf', 'occupation': 'rtgbh', 'exact_nature_of_duties': 'tkktgk'}}
+INFO 2025-03-17 13:05:19,378 views Reply message : You enter Exact nature of duties: tkktgk
+Enter the State of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:05:19,378 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 209
+INFO 2025-03-17 13:05:30,007 views Received WhatsApp message from whatsapp:+917775889251: kjgkjg
+DEBUG 2025-03-17 13:05:30,007 views Current step: 4
+INFO 2025-03-17 13:05:30,007 views User entered state for Head of the family: kjgkjg
+DEBUG 2025-03-17 13:05:30,007 views State of all_data after entering state for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 9, 'name': 'hfjf', 'age': '23', 'gender': 'M', 'marital_status': 'M', 'qualification': 'hfjjf', 'occupation': 'rtgbh', 'exact_nature_of_duties': 'tkktgk', 'state': 'kjgkjg'}}
+INFO 2025-03-17 13:05:30,007 views Reply message : You entered State: kjgkjg
+Enter the District of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:05:30,008 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 197
+INFO 2025-03-17 13:05:39,347 views Received WhatsApp message from whatsapp:+917775889251: jtgkjtg
+DEBUG 2025-03-17 13:05:39,347 views Current step: 4
+INFO 2025-03-17 13:05:39,348 views User entered district for Head of the family: jtgkjtg
+DEBUG 2025-03-17 13:05:39,348 views State of all_data after entering district for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 10, 'name': 'hfjf', 'age': '23', 'gender': 'M', 'marital_status': 'M', 'qualification': 'hfjjf', 'occupation': 'rtgbh', 'exact_nature_of_duties': 'tkktgk', 'state': 'kjgkjg', 'district': 'jtgkjtg'}}
+INFO 2025-03-17 13:05:39,348 views Reply message : You entered District: jtgkjtg
+Enter permanent address of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:05:39,349 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 206
+INFO 2025-03-17 13:05:46,858 views Received WhatsApp message from whatsapp:+917775889251: krgjkrjgr
+DEBUG 2025-03-17 13:05:46,859 views Current step: 4
+INFO 2025-03-17 13:05:46,859 views User entered permanent address for Head of the family: krgjkrjgr
+DEBUG 2025-03-17 13:05:46,859 views State of all_data after entering permanent address for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 11, 'name': 'hfjf', 'age': '23', 'gender': 'M', 'marital_status': 'M', 'qualification': 'hfjjf', 'occupation': 'rtgbh', 'exact_nature_of_duties': 'tkktgk', 'state': 'kjgkjg', 'district': 'jtgkjtg', 'permanent_address': 'krgjkrjgr'}}
+INFO 2025-03-17 13:05:46,859 views Reply message : You entered Permanent address: krgjkrjgr
+Enter Landline number of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:05:46,860 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 215
+INFO 2025-03-17 13:05:55,821 views Received WhatsApp message from whatsapp:+917775889251: jgrkgj
+DEBUG 2025-03-17 13:05:55,821 views Current step: 4
+INFO 2025-03-17 13:05:55,821 views User entered landline number for Head of the family: jgrkgj
+DEBUG 2025-03-17 13:05:55,822 views State of all_data after entering landline number for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 12, 'name': 'hfjf', 'age': '23', 'gender': 'M', 'marital_status': 'M', 'qualification': 'hfjjf', 'occupation': 'rtgbh', 'exact_nature_of_duties': 'tkktgk', 'state': 'kjgkjg', 'district': 'jtgkjtg', 'permanent_address': 'krgjkrjgr', 'landline_no': 'jgrkgj'}}
+INFO 2025-03-17 13:05:55,822 views Reply message : You entered Landline no: jgrkgj
+Enter the Phone number of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:05:55,822 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 207
+INFO 2025-03-17 13:06:02,373 views Received WhatsApp message from whatsapp:+917775889251: 12345
+DEBUG 2025-03-17 13:06:02,374 views Current step: 4
+INFO 2025-03-17 13:06:02,374 views User entered phone number for Head of the family: 12345
+DEBUG 2025-03-17 13:06:02,374 views State of all_data after entering phone number for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 13, 'name': 'hfjf', 'age': '23', 'gender': 'M', 'marital_status': 'M', 'qualification': 'hfjjf', 'occupation': 'rtgbh', 'exact_nature_of_duties': 'tkktgk', 'state': 'kjgkjg', 'district': 'jtgkjtg', 'permanent_address': 'krgjkrjgr', 'landline_no': 'jgrkgj', 'phone_no': '12345'}}
+INFO 2025-03-17 13:06:02,374 views Reply message : You entered Phone no: 12345,
+Enter Alternative_no of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:06:02,374 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 202
+INFO 2025-03-17 13:06:24,906 views Received WhatsApp message from whatsapp:+917775889251: hrghrh
+DEBUG 2025-03-17 13:06:24,906 views Current step: 4
+WARNING 2025-03-17 13:06:24,906 views Invalid phone number entered: hrghrh. Length is 6. You entered the alternative number hrghrh. Please enter the correct 10 digit number.
+INFO 2025-03-17 13:06:24,907 views Reply message : You entered the alternative number hrghrh. Please enter the correct 10 digit number.
+INFO 2025-03-17 13:06:24,907 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 162
+INFO 2025-03-17 13:06:43,708 views Received WhatsApp message from whatsapp:+917775889251: 12348
+DEBUG 2025-03-17 13:06:43,708 views Current step: 4
+INFO 2025-03-17 13:06:43,708 views User entered alternative phone number for Head of the family: 12348
+DEBUG 2025-03-17 13:06:43,708 views State of all_data after entering alternative number for Head of the family: {'info_from_number': 'whatsapp:+917775889251', 'step': 4, 'samaj_name': 'Brahmin', 'surname': 'shri', 'members_list': {'total_members': 2, 'current_member': 1}, 'head of family': {'info_from_number': 'whatsapp:+917775889251', 'step': 14, 'name': 'hfjf', 'age': '23', 'gender': 'M', 'marital_status': 'M', 'qualification': 'hfjjf', 'occupation': 'rtgbh', 'exact_nature_of_duties': 'tkktgk', 'state': 'kjgkjg', 'district': 'jtgkjtg', 'permanent_address': 'krgjkrjgr', 'landline_no': 'jgrkgj', 'phone_no': '12345', 'alternative_no': '12348'}}
+INFO 2025-03-17 13:06:43,708 views Reply message : You entered Alternative no: 12348
+Enter email_id of the Head of the family.
+
+or
+
+(Enter 'R' to Re-enter the previous input)
+INFO 2025-03-17 13:06:43,709 basehttp "POST /whatsapp_webhook/ HTTP/1.1" 200 201
+INFO 2025-03-17 13:10:22,714 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 13:10:23,370 autoreload Watching for file changes with StatReloader
+INFO 2025-03-17 13:10:36,893 autoreload C:\Users\ankii\OneDrive\Desktop\whatsapp_bot\testapp\views.py changed, reloading.
+INFO 2025-03-17 13:10:37,484 autoreload Watching for file changes with StatReloader

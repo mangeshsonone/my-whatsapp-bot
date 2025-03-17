@@ -312,7 +312,7 @@ def memberdetail(md,msg,h):
             logger.info(f"User entered 'R'. Going back to step 7 for {h}.")
         else: 
             md['state']=msg
-            reply=f"You entered State: {msg}\nEnter the District of the {h}" 
+            reply=f"You entered State: {msg}\nEnter the District of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)" 
             md['step']=9
             print(all_data)
             print("\n\n\n")
@@ -352,7 +352,7 @@ def memberdetail(md,msg,h):
             logger.info(f"User entered 'R'. Going back to step 9 for {h}.")
         else:
             md['permanent_address']=msg
-            reply=f"You entered Permanent address: {msg}\nEnter Landline no of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
+            reply=f"You entered Permanent address: {msg}\nEnter Landline number of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
             md['step']=11
             # print(all_data)
             # print("\n\n\n")
@@ -373,7 +373,7 @@ def memberdetail(md,msg,h):
             
         else:
             md['landline_no']=msg
-            reply=f"You entered Landline no: {msg}\nEnter Phone_no of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
+            reply=f"You entered Landline no: {msg}\nEnter the Phone number of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
             md['step']=12
             # print(all_data)
             # print("\n\n\n")
@@ -399,14 +399,18 @@ def memberdetail(md,msg,h):
                 # print(reply)
                 logger.info(f"User entered 'R'. Going back to step 7 for {h}.")
         else:
-            md['phone_no']=msg
-            reply=f"You entered Phone no: {msg},\nEnter Alternative_no of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
-            md['step']=13
-            # print(all_data)
-            # print("\n\n\n")
-            # print(reply)
-            logger.info(f"User entered phone number for {h}: {msg}")
-            logger.debug(f"State of all_data after entering phone number for {h}: {all_data}")
+            if not msg.isdigit() or len(msg)!=10:
+                reply=f"You entered the phone number {msg}. Please enter the correct 10 digit number."
+                logging.warning(f"Invalid phone number entered: {msg}. Length is {len(msg)}. {reply}")
+            else:
+                md['phone_no']=msg
+                reply=f"You entered Phone no: {msg},\nEnter Alternative_no of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
+                md['step']=13
+                # print(all_data)
+                # print("\n\n\n")
+                # print(reply)
+                logger.info(f"User entered phone number for {h}: {msg}")
+                logger.debug(f"State of all_data after entering phone number for {h}: {all_data}")
         
         # Log the reply message to be sent to the user
         logger.info(f"Reply message : {reply}")
@@ -419,14 +423,18 @@ def memberdetail(md,msg,h):
             # print(reply)
             logger.info(f"User entered 'R'. Going back to step 12 for {h}.")
         else:
-            md['alternative_no']=msg
-            reply=f"You entered Alternative no: {msg}\nEnter email_id of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
-            md['step']=14
-            # print(all_data)
-            # print("\n\n\n")
-            # print(reply)
-            logger.info(f"User entered alternative phone number for {h}: {msg}")
-            logger.debug(f"State of all_data after entering alternative number for {h}: {all_data}")
+            if not msg.isdigit() or len(msg)!=10:
+                reply=f"You entered the alternative number {msg}. Please enter the correct 10 digit number."
+                logger.warning(f"Invalid phone number entered: {msg}. Length is {len(msg)}. {reply}")
+            else:
+                md['alternative_no']=msg
+                reply=f"You entered Alternative no: {msg}\nEnter email_id of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
+                md['step']=14
+                # print(all_data)
+                # print("\n\n\n")
+                # print(reply)
+                logger.info(f"User entered alternative phone number for {h}: {msg}")
+                logger.debug(f"State of all_data after entering alternative number for {h}: {all_data}")
 
         # Log the reply message to be sent to the user
         logger.info(f"Reply message : {reply}")
