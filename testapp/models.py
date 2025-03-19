@@ -25,7 +25,7 @@ class PersonsData(models.Model):
     ]
 
     age = models.IntegerField(choices=AGE_CHOICES)
-    birth_date = models.CharField(max_length=100)
+    birth_date = models.DateField()
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     marital_status = models.CharField(max_length=1, choices=MARITAL_STATUS_CHOICES)
     qualification = models.CharField(max_length=100)

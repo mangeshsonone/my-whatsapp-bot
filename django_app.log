@@ -1,0 +1,77 @@
+INFO 2025-03-19 16:55:06,642 autoreload Watching for file changes with StatReloader
+INFO 2025-03-19 16:55:35,874 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2025-03-19 16:55:35,926 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-03-19 16:55:36,119 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+INFO 2025-03-19 16:55:36,421 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2025-03-19 16:55:36,440 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+INFO 2025-03-19 16:55:36,443 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2025-03-19 16:55:36,445 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2025-03-19 16:55:36,447 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+INFO 2025-03-19 16:55:36,472 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2025-03-19 16:55:36,472 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+WARNING 2025-03-19 16:55:44,782 log Forbidden (Origin checking failed - https://56fe-36-255-181-249.ngrok-free.app does not match any trusted origins.): /admin/login/
+WARNING 2025-03-19 16:55:44,784 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 403 2590
+INFO 2025-03-19 16:58:15,928 autoreload E:\wpp bot project\whatsapp_bot\whatsapp_bot\settings.py changed, reloading.
+INFO 2025-03-19 16:58:17,425 autoreload Watching for file changes with StatReloader
+INFO 2025-03-19 17:00:30,960 autoreload E:\wpp bot project\whatsapp_bot\whatsapp_bot\settings.py changed, reloading.
+INFO 2025-03-19 17:00:32,782 autoreload Watching for file changes with StatReloader
+WARNING 2025-03-19 17:05:45,040 log Not Found: /
+WARNING 2025-03-19 17:05:45,046 basehttp "GET / HTTP/1.1" 404 2424
+INFO 2025-03-19 17:05:53,351 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-03-19 17:05:53,451 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+INFO 2025-03-19 17:06:01,458 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-03-19 17:06:01,576 basehttp "GET /admin/ HTTP/1.1" 200 7496
+INFO 2025-03-19 17:06:01,794 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-03-19 17:06:01,857 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-03-19 17:06:01,857 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-03-19 17:06:14,185 basehttp "GET /admin/testapp/familyhead/ HTTP/1.1" 200 11868
+INFO 2025-03-19 17:06:14,261 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-03-19 17:06:14,274 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+INFO 2025-03-19 17:06:14,333 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-03-19 17:06:14,333 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+INFO 2025-03-19 17:06:14,333 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-03-19 17:06:14,333 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-03-19 17:06:14,335 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+INFO 2025-03-19 17:06:14,340 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+INFO 2025-03-19 17:06:14,405 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+INFO 2025-03-19 17:06:14,416 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2025-03-19 17:06:15,928 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-03-19 17:06:15,928 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-03-19 17:06:38,125 basehttp "POST /admin/testapp/familyhead/ HTTP/1.1" 200 10679
+INFO 2025-03-19 17:06:38,257 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2025-03-19 17:06:42,494 basehttp "POST /admin/testapp/familyhead/ HTTP/1.1" 302 0
+INFO 2025-03-19 17:06:42,553 basehttp "GET /admin/testapp/familyhead/ HTTP/1.1" 200 9687
+INFO 2025-03-19 17:06:42,679 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-03-19 17:06:42,756 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2025-03-19 17:06:45,285 basehttp "GET /admin/testapp/family/ HTTP/1.1" 200 11772
+INFO 2025-03-19 17:06:45,360 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-03-19 17:07:01,622 basehttp "POST /admin/testapp/family/ HTTP/1.1" 200 9763
+INFO 2025-03-19 17:07:03,711 basehttp "POST /admin/testapp/family/ HTTP/1.1" 302 0
+INFO 2025-03-19 17:07:03,770 basehttp "GET /admin/testapp/family/ HTTP/1.1" 200 9630
+INFO 2025-03-19 17:07:03,843 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-03-19 17:07:06,280 basehttp "GET /admin/testapp/member/ HTTP/1.1" 200 9706
+INFO 2025-03-19 17:07:06,340 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-03-19 17:07:09,698 basehttp "GET /admin/testapp/samaj/ HTTP/1.1" 200 9482
+INFO 2025-03-19 17:07:09,761 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-03-19 17:08:47,250 basehttp "GET /admin/testapp/familyhead/ HTTP/1.1" 200 9544
+INFO 2025-03-19 17:08:47,306 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-03-19 17:08:48,996 basehttp "GET /admin/testapp/family/ HTTP/1.1" 200 9492
+INFO 2025-03-19 17:08:49,070 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-03-19 17:08:50,924 basehttp "GET /admin/testapp/member/ HTTP/1.1" 200 9706
+INFO 2025-03-19 17:08:50,996 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-03-19 17:08:54,348 basehttp "GET /admin/testapp/samaj/ HTTP/1.1" 200 9482
+INFO 2025-03-19 17:08:54,411 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-03-19 17:27:25,512 basehttp "GET /admin/testapp/familyhead/ HTTP/1.1" 200 9544
+INFO 2025-03-19 17:27:25,592 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-03-19 17:27:28,088 basehttp "GET /admin/testapp/familyhead/12/change/ HTTP/1.1" 200 27112
+INFO 2025-03-19 17:27:28,216 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-03-19 17:27:28,216 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 9090
+INFO 2025-03-19 17:27:28,228 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-03-19 17:27:28,253 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-03-19 17:27:28,254 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+INFO 2025-03-19 17:27:28,257 basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-03-19 17:27:28,337 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11921
+INFO 2025-03-19 17:27:28,356 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-03-19 17:27:28,442 basehttp "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2025-03-19 17:37:53,355 autoreload E:\wpp bot project\whatsapp_bot\testapp\models.py changed, reloading.
+INFO 2025-03-19 17:37:54,610 autoreload Watching for file changes with StatReloader

@@ -55,7 +55,7 @@ ROOT_URLCONF = 'whatsapp_bot.urls'
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://89f3-42-108-236-252.ngrok-free.app',  # Add your ngrok URL
+    'https://56fe-36-255-181-249.ngrok-free.app',  # Add your ngrok URL
     # Add any other trusted origins here if needed
 ]
 

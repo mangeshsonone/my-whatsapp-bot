@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 from .models import Samaj,Family,Member,FamilyHead
 from django.core.exceptions import ObjectDoesNotExist
 import logging
+from datetime import datetime
 
 load_dotenv()
 
@@ -450,7 +451,7 @@ def memberdetail(md,msg,h):
             else:
                 md['email_id']=msg
                 md['step']=15
-                reply=f"You entered Email id: {msg}\nEnter Date of Birth (dd-mm-yyyy) of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
+                reply=f"You entered Email id: {msg}\nEnter Date of Birth (yyyy-mm-dd) of the {h}.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
                 
                 
                 logger.info(f"User entered email ID for {h}: {msg}")
@@ -467,12 +468,16 @@ def memberdetail(md,msg,h):
                 # print(reply)
                 logger.info(f"User entered 'R'. Going back to step 14 for {h}.")
             else:
-                md['birth_date']=msg
-                reply=f"You entered DOB: {msg},\nenter submit.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
-                md['step']=16
-               
-                logger.info(f"User entered date of birth for {h}: {msg}")
-                logger.debug(f"State of all_data after entering date of birth for {h}: {all_data}")
+                if msg != datetime.strptime(msg, '%Y-%m-%d').strftime('%Y-%m-%d'):
+                    reply="wrong input! datefield {msg}, enter (yyyy-mm-dd)"
+                    logger.warning(f"Invalid date field")
+                else:
+                    md['birth_date']=msg
+                    reply=f"You entered DOB: {msg},\nenter submit.\n\nor\n\n(Enter 'R' to Re-enter the previous input)"
+                    md['step']=16
+                
+                    logger.info(f"User entered date of birth for {h}: {msg}")
+                    logger.debug(f"State of all_data after entering date of birth for {h}: {all_data}")
 
             # Log the reply message to be sent to the user
             logger.info(f"Reply message : {reply}")
